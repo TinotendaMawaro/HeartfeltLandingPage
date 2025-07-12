@@ -11,6 +11,7 @@ import Testimonials from "@/components/testimonials";
 import Cta from "@/components/cta";
 import ServiceTimesSection from "@/components/services";
 import EventsHighlightsSection from "@/components/events";
+import FaqSection from "@/components/faq";
 
 export default function Home() {
   return (
@@ -23,6 +24,7 @@ export default function Home() {
       <ServiceTimesSection />
       <EventsHighlightsSection />
       <Cta />
+      <FaqSection />
     </>
   );
 }
