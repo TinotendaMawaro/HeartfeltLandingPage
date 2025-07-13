@@ -11,8 +11,8 @@ const events = [
     time: "5:00 AM - 10:00 PM",
     location: "Richland City, Mhondoro",
     description:
-      "A significant component of the conference is dedicated to prayer, for national issues & breakthroughs",
-    image: "/images/events/event1.jpg",
+      "A significant component of the conference is dedicated to prayer, for national issues & breakthroughs.",
+    image: "/images/events/CTF.jpg",
   },
   {
     title: "Pastor Benny Hinn Conference",
@@ -21,7 +21,7 @@ const events = [
     location: "Online via Zoom",
     description:
       "Don't miss the electrifying Zimbabwe Conference with Pastor Ben Hinn and Apostle Tavonga Vutabwashe!",
-    image: "/images/events/event2.jpg",
+    image: "/images/events/BennyHinn.png",
   },
   {
     title: "Men on Fire Conference",
@@ -30,7 +30,7 @@ const events = [
     location: "Richland City, Mhondoro",
     description:
       "It serves as a platform for intense worship, powerful sermons, and spiritual impartation.",
-    image: "/images/events/event3.jpg",
+    image: "/images/events/MOF.jpg",
   },
   {
     title: "Pioneers Conference",
@@ -39,7 +39,7 @@ const events = [
     location: "Various City Locations",
     description:
       "Join us as we reach out to the community, offering support and spreading hope.",
-    image: "/images/events/event4.jpg",
+    image: "/images/events/Pioneers.jpg",
   },
   {
     title: "Success Camp",
@@ -48,7 +48,7 @@ const events = [
     location: "Uganda",
     description:
       "An evening dedicated to worship and intercessory prayer for our community and nation.",
-    image: "/images/events/event5.jpg",
+    image: "/images/events/Success.jpg",
   },
   {
     title: "Christmas Carol Service",
@@ -57,7 +57,7 @@ const events = [
     location: "Church Sanctuary",
     description:
       "Celebrate the festive season with heartwarming carols and a special Christmas message.",
-    image: "/images/events/event6.jpg",
+    image: "/images/events/Carol.jpg",
   },
 ];
 
@@ -68,41 +68,49 @@ const EventsPage: React.FC = () => {
     <>
       <RegisterModal isOpen={modalOpen} onClose={() => setModalOpen(false)} />
 
-      <section className="relative bg-gradient-to-b from-indigo-900/60 via-indigo-900/30 to-indigo-900/10">
+      <section className="relative bg-gradient-to-b from-indigo-900/60 via-indigo-900/30 to-indigo-900/10 pb-20">
         <div className="mx-auto max-w-6xl px-4 sm:px-6">
+          {/* Section header */}
           <div className="mx-auto max-w-3xl pt-16 pb-12 text-center md:pb-20">
-            <div className="inline-flex items-center gap-3 pb-3 before:h-px before:w-8 before:bg-gradient-to-r before:from-transparent before:to-indigo-200/50 after:h-px after:w-8 after:bg-gradient-to-l after:from-transparent after:to-indigo-200/50">
-              <span className="inline-flex bg-gradient-to-r from-indigo-500 to-indigo-200 bg-clip-text text-transparent">
+            <div className="inline-flex items-center gap-3 pb-3">
+              <span className="inline-block text-transparent bg-clip-text bg-gradient-to-r from-indigo-500 to-indigo-200">
                 Join Us for Our Events
               </span>
             </div>
-            <h2 className="animate-[gradient_6s_linear_infinite] bg-[linear-gradient(to_right,var(--color-gray-200),var(--color-indigo-200),var(--color-gray-50),var(--color-indigo-300),var(--color-gray-200))] bg-[length:200%_auto] bg-clip-text text-3xl font-semibold text-transparent md:text-4xl">
-              Events Highlights
+            <h2 className="text-3xl md:text-4xl font-semibold text-transparent bg-clip-text gradient-text">
+              Upcoming Events 
             </h2>
             <p className="mt-4 text-indigo-200/65">
-              Join us as we celebrate and engage in transformative experiences through our highlighted events.
+              Celebrate and engage in transformative experiences through our highlighted events.
             </p>
           </div>
 
+          {/* Event cards */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {events.map((event, index) => (
               <div
                 key={index}
-                className="relative h-[500px] rounded-2xl overflow-hidden shadow-lg bg-black/20 transition-all duration-500 ease-in-out transform hover:-translate-y-2 hover:scale-[1.03] hover:shadow-indigo-500/30 group"
-                style={{
-                  backgroundImage: `url(${event.image})`,
-                  backgroundSize: "cover",
-                  backgroundPosition: "center",
-                }}
+                className="relative h-[500px] rounded-2xl overflow-hidden shadow-lg transition duration-500 transform hover:-translate-y-2 hover:scale-[1.03] hover:shadow-indigo-500/30 group bg-black/20"
               >
-                <div className="absolute left-0 w-full bg-gradient-to-t from-black/80 to-transparent transition-opacity duration-500 group-hover:from-black/90 h-1/2 bottom-0" />
+                <Image
+                  src={event.image}
+                  alt={event.title}
+                  fill
+                  className="absolute object-cover inset-0 z-0"
+                  priority
+                />
 
-                <div className="absolute bottom-24 left-6 right-6 text-white">
+                {/* Gradient overlay */}
+                <div className="absolute bottom-0 left-0 w-full h-2/3 bg-gradient-to-t from-black/80 to-transparent z-10 transition group-hover:from-black/90" />
+
+                {/* Text content */}
+                <div className="absolute bottom-24 left-6 right-6 z-20 text-white fade-in">
                   <h3 className="text-xl font-bold mb-1">{event.title}</h3>
-                  <p className="text-sm text-indigo-200">{event.description}</p>
+                  <p className="text-sm text-indigo-200 slide-up">{event.description}</p>
                 </div>
 
-                <div className="absolute bottom-6 left-6 right-6 flex flex-wrap justify-between items-center gap-2">
+                {/* Buttons */}
+                <div className="absolute bottom-6 left-6 right-6 z-20 flex flex-wrap justify-between items-center gap-2">
                   <button
                     onClick={() => setModalOpen(true)}
                     className="rounded-full bg-indigo-600 px-5 py-2 text-sm font-semibold text-white shadow-md transition hover:bg-indigo-700"
@@ -118,6 +126,60 @@ const EventsPage: React.FC = () => {
           </div>
         </div>
       </section>
+
+      {/* Local styles */}
+      <style jsx>{`
+        .gradient-text {
+          background-image: linear-gradient(
+            to right,
+            #e5e7eb,
+            #c7d2fe,
+            #f9fafb,
+            #a5b4fc,
+            #e5e7eb
+          );
+          background-size: 200% auto;
+          background-clip: text;
+          animation: gradientMove 6s linear infinite;
+        }
+
+        @keyframes gradientMove {
+          0% {
+            background-position: 0% center;
+          }
+          100% {
+            background-position: 200% center;
+          }
+        }
+
+        .fade-in {
+          animation: fadeIn 1s ease-out;
+        }
+
+        @keyframes fadeIn {
+          0% {
+            opacity: 0;
+          }
+          100% {
+            opacity: 1;
+          }
+        }
+
+        .slide-up {
+          animation: slideUp 0.7s ease-out;
+        }
+
+        @keyframes slideUp {
+          0% {
+            opacity: 0;
+            transform: translateY(10px);
+          }
+          100% {
+            opacity: 1;
+            transform: translateY(0);
+          }
+        }
+      `}</style>
     </>
   );
 };
