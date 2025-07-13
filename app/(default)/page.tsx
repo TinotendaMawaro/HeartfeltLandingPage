@@ -1,5 +1,5 @@
 export const metadata = {
-  title: "Home - Open PRO",
+  title: "Heartfelt International Ministries",
   description: "Page description",
 };
 

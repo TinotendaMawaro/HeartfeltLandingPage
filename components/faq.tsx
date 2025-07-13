@@ -62,7 +62,7 @@ export const FaqSection: React.FC = () => {
               className="h-full rounded-2xl overflow-hidden shadow-md bg-black/20 backdrop-blur-lg border border-indigo-100/10 p-6 flex flex-col transition hover:shadow-indigo-500/30"
             >
               <div className="flex-1">
-                <p className="text-sm font-semibold bg-gradient-to-r from-orange-600 to-yellow-400 bg-clip-text text-transparent mb-2 uppercase tracking-wide">
+                <p className="text-sm font-semibold bg-gradient-to-r from-indigo-500 to-indigo-200 bg-clip-text text-transparent mb-2 uppercase tracking-wide">
                   {faq.category}
                 </p>
                 <h3 className="text-white text-lg font-bold mb-4">
