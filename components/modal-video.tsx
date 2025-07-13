@@ -26,9 +26,9 @@ export default function ModalVideo({
 
   return (
     <div className="relative">
-      {/* Decoration Illustration */}
+      {/* Background Decoration */}
       <div
-        className="pointer-events-none absolute bottom-8 left-1/2 -z-10 -ml-28 -translate-x-1/2 translate-y-1/2"
+        className="pointer-events-none absolute bottom-8 left-1/2 -z-10 -translate-x-1/2 translate-y-1/2 opacity-40"
         aria-hidden="true"
       >
         <Image
@@ -39,17 +39,17 @@ export default function ModalVideo({
         />
       </div>
 
-      {/* Thumbnail Trigger */}
+      {/* Thumbnail Button */}
       <button
-        className="group relative flex items-center justify-center rounded-2xl focus:outline-none focus-visible:ring-3 focus-visible:ring-indigo-200"
+        className="group relative flex items-center justify-center overflow-hidden rounded-2xl shadow-xl transition-transform duration-300 hover:scale-105 focus:outline-none focus-visible:ring-4 focus-visible:ring-indigo-300"
         onClick={() => setModalOpen(true)}
         aria-label="Watch the video"
         data-aos="fade-up"
         data-aos-delay={200}
       >
-        <figure className="relative overflow-hidden rounded-2xl before:absolute before:inset-0 before:bg-gradient-to-br before:from-gray-900 before:via-indigo-500/20 before:to-gray-900">
+        <figure className="relative w-full before:absolute before:inset-0 before:bg-gradient-to-br before:from-gray-900/80 before:via-indigo-700/30 before:to-gray-900/80 before:z-10">
           <Image
-            className="opacity-50 grayscale"
+            className="w-full grayscale opacity-60 transition-all duration-300 group-hover:opacity-80 group-hover:grayscale-0"
             src={thumb}
             width={thumbWidth}
             height={thumbHeight}
@@ -57,42 +57,38 @@ export default function ModalVideo({
             alt={thumbAlt}
           />
         </figure>
-        <span className="absolute pointer-events-none p-2.5 before:absolute before:inset-0 before:bg-gray-950 before:rounded-full before:transition-transform group-hover:before:scale-110">
-          <span className="relative flex items-center gap-3">
-            <svg
-              width={20}
-              height={20}
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <defs>
-                <linearGradient id="playGrad" x1={0} y1={0} x2={0} y2={20}>
-                  <stop stopColor="#6366F1" />
-                  <stop offset="1" stopColor="#6366F1" stopOpacity=".72" />
-                </linearGradient>
-              </defs>
-              <circle cx={10} cy={10} r={10} fill="url(#playGrad)" />
-              <path
-                d="M13.5 10L8.5 6.5v7L13.5 10Z"
-                fill="#fff"
-              />
-            </svg>
-            <span className="text-sm font-medium leading-tight text-gray-300">
-              Live Service
-            </span>
-          </span>
+
+        {/* Play Button */}
+        <span className="absolute z-20 flex items-center gap-3 rounded-full bg-gray-950/80 px-4 py-2 backdrop-blur-md transition-all duration-300 group-hover:scale-110 group-hover:shadow-lg">
+          <svg
+            className="animate-pulse"
+            width={22}
+            height={22}
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <defs>
+              <linearGradient id="playGrad" x1={0} y1={0} x2={0} y2={20}>
+                <stop stopColor="#818CF8" />
+                <stop offset="1" stopColor="#6366F1" stopOpacity=".8" />
+              </linearGradient>
+            </defs>
+            <circle cx={11} cy={11} r={10} fill="url(#playGrad)" />
+            <path d="M14.5 11L9.5 7.5v7L14.5 11Z" fill="#fff" />
+          </svg>
+          <span className="text-sm font-medium text-white">Watch Live</span>
         </span>
       </button>
 
-      {/* Modal Dialog with Embedded YouTube */}
+      {/* Modal Video Dialog */}
       <Dialog open={modalOpen} onClose={() => setModalOpen(false)}>
-        <DialogBackdrop className="fixed inset-0 bg-black/70" />
-        <div className="fixed inset-0 flex items-center justify-center p-4">
-          <DialogPanel className="aspect-video w-full max-w-6xl overflow-hidden rounded-2xl bg-black">
+        <DialogBackdrop className="fixed inset-0 bg-black/70 backdrop-blur-sm" />
+        <div className="fixed inset-0 z-50 flex items-center justify-center p-4">
+          <DialogPanel className="aspect-video w-full max-w-6xl overflow-hidden rounded-2xl shadow-2xl ring-1 ring-indigo-400/20 bg-black">
             <iframe
               ref={videoRef}
-              className="w-full h-full"
-              src={`https://www.youtube.com/embed/${youtubeId}?autoplay=1`}
+              className="h-full w-full"
+              src={`https://www.youtube.com/embed/Dtwk2hKbHPA`}
               title="Heartfelt Live Service"
               frameBorder="0"
               allow="autoplay; encrypted-media"

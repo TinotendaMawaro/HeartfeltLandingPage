@@ -133,7 +133,7 @@ export default function Footer() {
         </div>
 
         <div className="border-t border-gray-700 py-4 text-center text-xs sm:text-sm text-gray-400">
-          © {new Date().getFullYear()} Heartfelt. All rights reserved.
+          © {new Date().getFullYear()} Heartfelt Media. All rights reserved.
         </div>
       </div>
     </footer>

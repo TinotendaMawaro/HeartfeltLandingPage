@@ -5,7 +5,7 @@ import logo from "@/public/images/logos-04.png";
 export default function Logo() {
   return (
     <Link href="/" className="inline-flex shrink-0" aria-label="Cruip">
-      <Image src={logo} alt="Cruip Logo" width={32} height={32} />
+      <Image src={logo} alt="Him Logo" width={32} height={32} />
     </Link>
   );
 }
