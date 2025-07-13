@@ -12,7 +12,7 @@ const events = [
     location: "Richland City, Mhondoro",
     description:
       "A significant component of the conference is dedicated to prayer, for national issues & breakthroughs.",
-    image: "/images/events/CTF.jpg",
+    image: "/images/CTF.jpg",
   },
   {
     title: "Pastor Benny Hinn Conference",
@@ -21,7 +21,7 @@ const events = [
     location: "Online via Zoom",
     description:
       "Don't miss the electrifying Zimbabwe Conference with Pastor Ben Hinn and Apostle Tavonga Vutabwashe!",
-    image: "/images/events/BennyHinn.png",
+    image: "/images/BennyHinn.png",
   },
   {
     title: "Men on Fire Conference",
@@ -30,7 +30,7 @@ const events = [
     location: "Richland City, Mhondoro",
     description:
       "It serves as a platform for intense worship, powerful sermons, and spiritual impartation.",
-    image: "/images/events/MOF.jpg",
+    image: "/images/MOF.jpg",
   },
   {
     title: "Pioneers Conference",
@@ -39,7 +39,7 @@ const events = [
     location: "Various City Locations",
     description:
       "Join us as we reach out to the community, offering support and spreading hope.",
-    image: "/images/events/Pioneers.jpg",
+    image: "/images/Pioneers.jpg",
   },
   {
     title: "Success Camp",
@@ -48,7 +48,7 @@ const events = [
     location: "Uganda",
     description:
       "An evening dedicated to worship and intercessory prayer for our community and nation.",
-    image: "/images/events/Success.jpg",
+    image: "/images/Success.jpg",
   },
   {
     title: "Christmas Carol Service",
@@ -57,7 +57,7 @@ const events = [
     location: "Church Sanctuary",
     description:
       "Celebrate the festive season with heartwarming carols and a special Christmas message.",
-    image: "/images/events/Carol.jpg",
+    image: "/images/Carol.jpg",
   },
 ];
 
