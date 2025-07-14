@@ -66,9 +66,9 @@ export default function Header() {
   ];
 
   return (
-    <header className="z-30 w-full bg-gray-900/90 backdrop-blur-md shadow-md fixed top-0 left-0">
-      <div className="mx-auto max-w-6xl px-4 sm:px-6">
-        <div className="flex h-16 items-center justify-between">
+    <header className="z-30 w-full bg-white/90 backdrop-blur-md shadow-md fixed top-0 left-0">
+      <div className="mx-auto px-4 sm:px-6" style={{ maxWidth: "1220px" }}>
+        <div className="flex h-23 items-center justify-between">
           {/* Logo */}
           <div className="flex items-center">
             <Logo />
@@ -80,7 +80,7 @@ export default function Header() {
               <Link
                 key={index}
                 href={item.href}
-                className="text-sm font-medium text-gray-300 transition-all duration-200 hover:text-white hover:scale-105"
+                className="text-sm font-medium text-black transition-all duration-200 hover:text-gray-700 hover:scale-105"
               >
                 {item.label}
               </Link>
@@ -90,7 +90,7 @@ export default function Header() {
             <div className="relative">
               <button
                 onClick={() => setDropdownOpen(!dropdownOpen)}
-                className="relative text-sm font-medium text-gray-300 hover:text-white transition flex items-center select-none"
+                className="relative text-sm font-medium text-black hover:text-gray-700 transition flex items-center select-none"
                 aria-haspopup="true"
                 aria-expanded={dropdownOpen}
               >
@@ -161,7 +161,7 @@ export default function Header() {
           {/* Mobile Menu Button */}
           <button
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            className="md:hidden flex items-center justify-center p-2 rounded-md text-gray-300 hover:text-white hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-indigo-500"
+            className="md:hidden flex items-center justify-center p-2 rounded-md text-black hover:text-gray-700 hover:bg-gray-200 focus:outline-none focus:ring-2 focus:ring-indigo-500"
             aria-label="Toggle menu"
             aria-expanded={mobileMenuOpen}
           >
@@ -183,11 +183,12 @@ export default function Header() {
           </button>
 
           {/* Auth Buttons */}
-          <ul className="hidden md:flex items-center gap-3">
+<ul
+  className="hidden md:flex items-center gap-3" style={{ marginLeft: "2rem", transform: "translateX(-22%)" }} >
             <li>
               <Link
                 href="/signin"
-                className="btn-sm relative bg-gradient-to-r from-gray-800 to-gray-700 px-4 py-2 text-sm text-gray-300 rounded-md transition hover:bg-gray-700"
+                className="btn-sm relative bg-gradient-to-r from-gray-800 to-gray-700 px-4 py-2 text-sm text-white rounded-md transition hover:bg-gray-700 hover:text-blue-500"
               >
                 Sign In
               </Link>
@@ -205,13 +206,13 @@ export default function Header() {
 
         {/* Mobile Nav Menu */}
         {mobileMenuOpen && (
-          <nav className="md:hidden bg-gray-900/90 backdrop-blur-md rounded-b-2xl mt-2 px-4 py-4 shadow-lg animate-fade-down">
+          <nav className="md:hidden bg-gray-200 rounded-b-2xl mt-2 px-4 py-4 shadow-lg animate-fade-down">
             <ul className="flex flex-col space-y-3">
               {navItems.map((item, index) => (
                 <li key={index}>
                   <Link
                     href={item.href}
-                    className="block text-gray-300 text-base font-medium hover:text-white"
+                    className="block text-black text-base font-medium hover:text-gray-700"
                     onClick={() => setMobileMenuOpen(false)}
                   >
                     {item.label}
@@ -223,7 +224,7 @@ export default function Header() {
               <li>
                 <button
                   onClick={() => setDropdownOpen(!dropdownOpen)}
-                  className="w-full text-left text-gray-300 hover:text-white font-medium flex items-center justify-between"
+                  className="w-full text-left text-black hover:text-gray-700 font-medium flex items-center justify-between"
                 >
                   More
                   <svg
@@ -245,7 +246,7 @@ export default function Header() {
                           <li key={event.slug}>
                             <Link
                               href={`/events/${event.slug}`}
-                              className="flex items-center gap-3 text-indigo-100 hover:text-white"
+                              className="flex items-center gap-3 text-indigo-700 hover:text-gray-900"
                               onClick={() => {
                                 setDropdownOpen(false);
                                 setMobileMenuOpen(false);
@@ -258,7 +259,7 @@ export default function Header() {
                                 loading="lazy"
                               />
                               <div className="flex flex-col">
-                                <span className="text-sm font-semibold">
+                                <span className="text-sm font-semibold text-black">
                                   {event.title}
                                 </span>
                                 <span className="text-xs text-indigo-400 font-mono tracking-wide animate-pulse">
@@ -274,7 +275,7 @@ export default function Header() {
                       <li key={i}>
                         <Link
                           href={`/${page.toLowerCase().replace(/\s+/g, "-")}`}
-                          className="block text-indigo-100 hover:text-white"
+                          className="block text-indigo-700 hover:text-gray-900"
                           onClick={() => {
                             setDropdownOpen(false);
                             setMobileMenuOpen(false);
