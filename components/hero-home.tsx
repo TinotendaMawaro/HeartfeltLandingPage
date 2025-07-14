@@ -18,7 +18,7 @@ export default function HeroHome() {
           className="object-cover object-center"
           priority
         />
-        <div className="absolute inset-0 bg-black/40" />
+        <div className="absolute inset-0 bg-blue-900/30" />
       </div>
 
       {/* Hero content */}
