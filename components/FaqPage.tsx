@@ -133,7 +133,7 @@ const faqCategories = [
 ];
 
 export default function FAQPage() {
-  const [open, setOpen] = React.useState<Record<string, number | null>>({});
+  const [open, setOpen] = useState<Record<string, number | null>>({});
 
   const toggle = (title: string, i: number) => {
     setOpen((prev) => ({
@@ -148,34 +148,33 @@ export default function FAQPage() {
         <title>FAQ - Heartfelt International Ministries</title>
       </Head>
 
-      <main className="relative bg-gradient-to-b from-indigo-900/60 via-indigo-900/30 to-indigo-900/10 min-h-screen py-10 px-4 sm:px-6">
+      <main className="min-h-screen py-10 px-4 sm:px-6 bg-white">
         <div className="max-w-7xl mx-auto">
-            <section className="text-center">
-                <div className="inline-flex justify-center items-center gap-3 pb-3 before:h-px before:w-8 before:bg-gradient-to-r before:from-transparent before:to-indigo-200/50 after:h-px after:w-8 after:bg-gradient-to-l after:from-transparent after:to-indigo-200/50 mx-auto">
-                    <span className="inline-flex bg-gradient-to-r from-indigo-500 to-indigo-200 bg-clip-text text-transparent font-semibold">
-                    FAQ Section
-                    </span>
-                </div>
-                <h1 className="text-4xl font-extrabold mb-2 animate-[gradient_6s_linear_infinite] bg-[length:200%_auto] bg-gradient-to-r from-indigo-400 via-indigo-200 to-indigo-400 bg-clip-text text-transparent">
-                    Need Help? We've Got You.
-                </h1>
-                <p className="max-w-xl mx-auto text-lg text-indigo-100/90">
-                    Find answers to common questions about Heartfelt International Ministries, our services, membership, and more.
-                </p>
-            </section>
-
+          <section className="text-center">
+            <div className="inline-flex justify-center items-center gap-3 pb-3 before:h-px before:w-8 before:bg-gradient-to-r before:from-transparent before:to-blue-400/50 after:h-px after:w-8 after:bg-gradient-to-l after:from-transparent after:to-blue-400/50 mx-auto">
+              <span className="inline-flex bg-gradient-to-r from-blue-600 to-blue-300 bg-clip-text text-transparent font-semibold">
+                FAQ Section
+              </span>
+            </div>
+            <h1 className="text-4xl font-extrabold mb-2 animate-[gradient_6s_linear_infinite] bg-[length:200%_auto] bg-gradient-to-r from-black via-blue-500 to-black bg-clip-text text-transparent">
+              Need Help? We've Got You.
+            </h1>
+            <p className="max-w-xl mx-auto text-lg text-gray-700">
+              Find answers to common questions about Heartfelt International Ministries, our services, membership, and more.
+            </p>
+          </section>
 
           <div className="flex flex-col lg:flex-row mt-16 gap-10">
             {/* Sidebar */}
             <aside className="w-full lg:w-1/4">
-              <div className="bg-indigo-900/20 p-6 rounded-lg shadow-lg">
-                <h3 className="text-lg font-semibold mb-4 text-indigo-200">Categories</h3>
+              <div className="bg-blue-50 p-6 rounded-lg shadow-md">
+                <h3 className="text-lg font-semibold mb-4 text-blue-800">Categories</h3>
                 <ul className="space-y-2">
                   {faqCategories.map((cat) => (
                     <li key={cat.title}>
                       <a
                         href={`#${cat.title.replace(/\s+/g, "-").toLowerCase()}`}
-                        className="text-sm text-indigo-100 hover:text-indigo-300 transition-colors"
+                        className="text-sm text-blue-700 hover:text-blue-900 transition-colors"
                       >
                         {cat.title}
                       </a>
@@ -193,17 +192,17 @@ export default function FAQPage() {
                   id={cat.title.replace(/\s+/g, "-").toLowerCase()}
                   className="mb-10 animate-fade-in-up"
                 >
-                  <h2 className="text-xl font-semibold mb-5 flex items-center gap-2 text-indigo-200">
+                  <h2 className="text-xl font-semibold mb-5 flex items-center gap-2 text-blue-800">
                     <span className="text-2xl">{cat.icon}</span> {cat.title}
                   </h2>
                   <div className="space-y-4">
                     {cat.items.map((faq, i) => (
                       <div
                         key={i}
-                        className="border border-indigo-700 rounded-md overflow-hidden bg-indigo-900/10 shadow-md"
+                        className="border border-blue-300 rounded-md overflow-hidden bg-blue-50 shadow-sm"
                       >
                         <button
-                          className="w-full text-left p-4 bg-indigo-900/30 hover:bg-indigo-900/50 flex justify-between items-center text-indigo-100 transition-colors"
+                          className="w-full text-left p-4 bg-blue-100 hover:bg-blue-200 flex justify-between items-center text-blue-900 transition-colors"
                           onClick={() => toggle(cat.title, i)}
                           aria-expanded={open[cat.title] === i}
                           aria-controls={`${cat.title}-${i}-answer`}
@@ -216,7 +215,7 @@ export default function FAQPage() {
                         {open[cat.title] === i && (
                           <div
                             id={`${cat.title}-${i}-answer`}
-                            className="p-4 bg-indigo-900/20 text-sm text-indigo-200"
+                            className="p-4 bg-blue-50 text-sm text-blue-800"
                           >
                             {faq.answer}
                           </div>
@@ -227,15 +226,13 @@ export default function FAQPage() {
                 </section>
               ))}
 
-              <div className="mt-12 border-t border-indigo-700 pt-6">
-                <div className="inline-flex items-center gap-3 pb-3 before:h-px before:w-8 before:bg-gradient-to-r before:from-transparent before:to-indigo-200/50 after:h-px after:w-8 after:bg-gradient-to-l after:from-transparent after:to-indigo-200/50">
-                  <span className="inline-flex bg-gradient-to-r from-indigo-500 to-indigo-200 bg-clip-text text-transparent font-semibold">
+              <div className="mt-12 border-t border-blue-300 pt-6">
+                <div className="inline-flex items-center gap-3 pb-3 before:h-px before:w-8 before:bg-gradient-to-r before:from-transparent before:to-blue-400/50 after:h-px after:w-8 after:bg-gradient-to-l after:from-transparent after:to-blue-400/50">
+                  <span className="inline-flex bg-gradient-to-r from-blue-600 to-blue-300 bg-clip-text text-transparent font-semibold">
                     Tailored For You
                   </span>
                 </div>
-                <h3 className="text-sm text-indigo-200 mb-3">
-                  Explore Topics
-                </h3>
+                <h3 className="text-sm text-blue-800 mb-3">Explore Topics</h3>
                 <div className="flex flex-wrap gap-2">
                   {[
                     "General Checks",
@@ -258,7 +255,7 @@ export default function FAQPage() {
                   ].map((topic) => (
                     <span
                       key={topic}
-                      className="bg-indigo-700/40 hover:bg-indigo-600 text-sm text-indigo-100 px-3 py-1 rounded-full cursor-pointer transition-colors"
+                      className="bg-blue-200 hover:bg-blue-300 text-sm text-blue-900 px-3 py-1 rounded-full cursor-pointer transition-colors"
                     >
                       {topic}
                     </span>
@@ -269,7 +266,6 @@ export default function FAQPage() {
           </div>
         </div>
       </main>
-
     </>
   );
 }

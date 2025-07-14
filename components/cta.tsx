@@ -13,7 +13,7 @@ export default function Cta() {
       {/* Register Modal */}
       <RegisterModal isOpen={modalOpen} onClose={() => setModalOpen(false)} />
 
-      <section className="relative overflow-hidden">
+      <section className="relative overflow-hidden bg-white">
         {/* Background Shape */}
         <div
           className="pointer-events-none absolute bottom-0 left-1/2 -z-10 -mb-24 ml-20 -translate-x-1/2"
@@ -28,19 +28,19 @@ export default function Cta() {
           />
         </div>
 
-        <div className="max-w6xl mx-auto px-4 sm:px-6">
-          <div className="bg-linear-to-r from-transparent via-gray-800/50 py-12 md:py-20">
-            <div className="mx-auto max-w-3xl text-center">
+        <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
+          <div className="py-16 md:py-24">
+            <div className="mx-auto max-w-4xl text-center">
               {/* Header Tagline */}
-              <div className="inline-flex items-center gap-3 pb-3 before:h-px before:w-8 before:bg-gradient-to-r before:from-transparent before:to-indigo-200/50 after:h-px after:w-8 after:bg-gradient-to-l after:from-transparent after:to-indigo-200/50">
-                <span className="inline-flex bg-gradient-to-r from-indigo-500 to-indigo-200 bg-clip-text text-transparent">
+              <div className="inline-flex items-center gap-3 pb-3 before:h-px before:w-10 before:bg-gradient-to-r before:from-transparent before:to-blue-400/70 after:h-px after:w-10 after:bg-gradient-to-l after:from-transparent after:to-blue-400/70">
+                <span className="inline-flex bg-gradient-to-r from-black via-gray-700 to-black bg-clip-text text-transparent font-semibold text-sm sm:text-base">
                   Join Us for Our Events
                 </span>
               </div>
 
               {/* Headline */}
               <h2
-                className="animate-[gradient_6s_linear_infinite] bg-[linear-gradient(to_right,var(--color-gray-200),var(--color-indigo-200),var(--color-gray-50),var(--color-indigo-300),var(--color-gray-200))] bg-[length:200%_auto] bg-clip-text pb-8 font-nacelle text-3xl font-semibold text-transparent md:text-4xl"
+                className="relative pb-10 font-nacelle text-3xl font-extrabold text-transparent sm:text-4xl md:text-5xl bg-clip-text bg-gradient-to-r from-black via-gray-700 to-black animate-gradient-x"
                 data-aos="fade-up"
               >
                 Register Now for Our Upcoming Event
@@ -48,7 +48,7 @@ export default function Cta() {
 
               {/* Description */}
               <p
-                className="mb-8 text-indigo-200/70"
+                className="mb-10 max-w-2xl mx-auto text-gray-900 text-base sm:text-lg md:text-xl"
                 data-aos="fade-up"
                 data-aos-delay={200}
               >
@@ -56,30 +56,47 @@ export default function Cta() {
               </p>
 
               {/* Buttons */}
-              <div className="mx-auto max-w-xs sm:flex sm:max-w-none sm:justify-center">
+              <div className="mx-auto flex max-w-sm flex-col gap-4 sm:flex-row sm:max-w-none sm:justify-center">
                 {/* Register Button (opens modal) */}
-                <div data-aos="fade-up" data-aos-delay={400}>
-                  <button
-                    onClick={() => setModalOpen(true)}
-                    className="btn relative w-full bg-gradient-to-b from-gray-800 to-gray-800/60 text-gray-300 hover:bg-gray-700 sm:w-auto px-6 py-3 rounded-xl transition"
-                  >
-                    Register Now
-                  </button>
-                </div>
+                <button
+                  onClick={() => setModalOpen(true)}
+                  className="btn w-full rounded-xl bg-gradient-to-b from-blue-400 to-blue-600 px-6 py-3 text-white shadow-md transition hover:from-blue-500 hover:to-blue-700 sm:w-auto"
+                  data-aos="fade-up"
+                  data-aos-delay={400}
+                >
+                  Register Now
+                </button>
 
                 {/* Learn More Link */}
-                <div data-aos="fade-up" data-aos-delay={600}>
-                  <a
-                    className="btn relative w-full bg-gradient-to-b from-gray-800 to-gray-800/60 text-gray-300 hover:bg-gray-700 sm:ml-4 sm:w-auto px-6 py-3 rounded-xl transition"
-                    href="/event-details"
-                  >
-                    Learn More
-                  </a>
-                </div>
+                <a
+                  href="/event-details"
+                  className="btn w-full rounded-xl bg-gradient-to-b from-blue-400 to-blue-600 px-6 py-3 text-white shadow-md transition hover:from-blue-500 hover:to-blue-700 sm:ml-4 sm:w-auto"
+                  data-aos="fade-up"
+                  data-aos-delay={600}
+                >
+                  Learn More
+                </a>
               </div>
             </div>
           </div>
         </div>
+
+        <style jsx>{`
+          @keyframes gradient-x {
+            0%,
+            100% {
+              background-position: 0% center;
+            }
+            50% {
+              background-position: 100% center;
+            }
+          }
+
+          .animate-gradient-x {
+            background-size: 200% auto;
+            animation: gradient-x 6s linear infinite;
+          }
+        `}</style>
       </section>
     </>
   );

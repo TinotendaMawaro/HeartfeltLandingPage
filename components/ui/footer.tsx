@@ -53,6 +53,7 @@ export default function Footer() {
           />
         </div>
 
+        {/* Grid layout for footer content */}
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 py-12 md:py-16 text-sm sm:text-base">
           {/* Contact and Logo */}
           <div className="space-y-4 sm:space-y-5">
@@ -124,7 +125,7 @@ export default function Footer() {
               />
               <button
                 type="submit"
-                className="bg-app-primary text-white rounded-md px-6 py-2 hover:bg-indigo-700 transition"
+                className="bg-app-primary text-white rounded-md px-6 py-2 hover:bg-indigo-700 transition w-full sm:w-auto"
               >
                 Subscribe
               </button>
@@ -132,6 +133,7 @@ export default function Footer() {
           </div>
         </div>
 
+        {/* Footer copyright */}
         <div className="border-t border-gray-700 py-4 text-center text-xs sm:text-sm text-gray-400">
           © {new Date().getFullYear()} Heartfelt Media. All rights reserved.
         </div>
