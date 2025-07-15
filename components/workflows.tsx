@@ -9,19 +9,19 @@ const workflows = [
     title: "Find A Zone",
     description: "Join us at one of our many zones across the country.",
     image: WorflowImg01,
-    href: "#0",
+    href: "/zones",
   },
   {
     title: "Upcoming Events",
     description: "Stay connected with our latest services and special events.",
     image: WorflowImg02,
-    href: "#0",
+    href: "/events",
   },
   {
     title: "Get Involved",
     description: "Discover ways to serve and connect with our community.",
     image: WorflowImg03,
-    href: "#0",
+    href: "/departments",
   },
 ];
 
