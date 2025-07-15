@@ -196,7 +196,8 @@ export default function Header() {
             <li>
               <Link
                 href="/signup"
-                className="btn-sm bg-gradient-to-t from-indigo-600 to-indigo-500 px-4 py-2 text-sm text-white rounded-md shadow hover:from-indigo-700 hover:to-indigo-600"
+
+  className="btn-sm bg-gradient-to-t from-[#1e90ff] to-blue-500 px-4 py-2 text-sm text-white rounded-md shadow hover:from-blue-600 hover:to-blue-600"
               >
                 Register
               </Link>

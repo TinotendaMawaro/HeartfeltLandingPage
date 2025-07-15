@@ -126,7 +126,7 @@ export default function Testimonials() {
     <section className="py-16 bg-[linear-gradient(to_right,#F3F4F6,#E5E7EB,#D1D5DB,#E5E7EB,#F3F4F6)] bg-[length:200%_auto] animate-[moving-gradient_10s_linear_infinite]">
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
         <div className="text-center max-w-3xl mx-auto mb-14">
-          <h2 className="animate-[gradient_6s_linear_infinite] bg-[linear-gradient(to_right,#000000,rgba(0,0,0,0.5),#1E90FF,rgba(0,0,0,0.5),#000000)] bg-[length:200%_auto] bg-clip-text text-transparent font-['Montserrat'] text-3xl md:text-4xl lg:text-5xl font-extrabold uppercase leading-[64px] tracking-[-0.01em] drop-shadow-md mb-4">
+          <h2 className="animate-[gradient_6s_linear_infinite] bg-[linear-gradient(to_right,#000000,rgba(0,0,0,0.5),#1E90FF,rgba(0,0,0,0.5),#000000)] bg-[length:200%_auto] bg-clip-text text-transparent relative font-['Roboto Condensed'] text-[32px] tracking-[-0.01em] leading-[64px] uppercase inline-block text-center mb-4">
             Partner with a Department
           </h2>
           <p className="text-gray-900 mt-4 text-base sm:text-lg opacity-80 font-['Roboto Condensed']">
