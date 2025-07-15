@@ -63,15 +63,30 @@ const events = [
 
 const EventsPage: React.FC = () => {
   const [modalOpen, setModalOpen] = useState(false);
+  const [firstTime, setFirstTime] = useState(false);
+
+  const handleFirstTimeClick = () => {
+    setFirstTime(true);
+    setModalOpen(true);
+  };
+
+  const handleRegisterClick = () => {
+    setFirstTime(false);
+    setModalOpen(true);
+  };
 
   return (
     <>
-      <RegisterModal isOpen={modalOpen} onClose={() => setModalOpen(false)} />
+      <RegisterModal
+        isOpen={modalOpen}
+        onClose={() => setModalOpen(false)}
+        firstTime={firstTime}
+      />
 
       <section className="relative bg-white pb-20">
         <div className="mx-auto max-w-7xl px-6 sm:px-8 lg:px-12">
           {/* Section header */}
-          <div className="mx-auto max-w-4xl pt-16 pb-12 text-center md:pb-20">
+          <div className="mx-auto max-w-4xl pt-16 pb-6 text-center md:pb-12">
             <div className="inline-flex items-center gap-3 pb-3 before:h-px before:w-10 before:bg-gradient-to-r before:from-transparent before:to-blue-400/70 after:h-px after:w-10 after:bg-gradient-to-l after:from-transparent after:to-blue-400/70">
               <span className="inline-block bg-gradient-to-r from-black via-gray-700 to-black bg-clip-text text-transparent font-semibold text-sm sm:text-base">
                 Join Us for Our Events
@@ -84,6 +99,30 @@ const EventsPage: React.FC = () => {
               Celebrate and engage in transformative experiences through our highlighted events.
             </p>
           </div>
+
+          {/* First Time CTA */}
+          <div className="text-center mb-12">
+            <button
+              onClick={handleFirstTimeClick}
+              className="inline-flex items-center gap-2 text-sm sm:text-base font-semibold text-transparent bg-gradient-to-r from-blue-600 via-purple-500 to-pink-500 bg-clip-text animate-pulse hover:scale-105 hover:text-blue-800 transition-transform duration-300"
+            >
+              <svg
+                className="w-5 h-5 text-blue-500 animate-bounce"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M13 16h-1v-4h-1m1-4h.01M12 20.5C6.75 20.5 2.5 16.25 2.5 11S6.75 1.5 12 1.5 21.5 5.75 21.5 11 17.25 20.5 12 20.5z"
+                />
+              </svg>
+              First time? Please click here.
+            </button>
+          </div>
+
 
           {/* Event cards */}
           <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
@@ -100,7 +139,7 @@ const EventsPage: React.FC = () => {
                   priority
                 />
 
-                {/* Overlay gradient: subtle dark blue for text readability */}
+                {/* Overlay gradient */}
                 <div className="absolute bottom-0 left-0 w-full h-2/3 bg-gradient-to-t from-blue-900/70 to-transparent z-10 transition group-hover:from-blue-900/90" />
 
                 {/* Text content */}
@@ -112,7 +151,7 @@ const EventsPage: React.FC = () => {
                 {/* Buttons */}
                 <div className="absolute bottom-6 left-6 right-6 z-20 flex flex-wrap justify-between items-center gap-2">
                   <button
-                    onClick={() => setModalOpen(true)}
+                    onClick={handleRegisterClick}
                     className="rounded-full bg-gradient-to-b from-blue-400 to-blue-600 px-5 py-2 text-sm font-semibold text-white shadow-md transition hover:from-blue-500 hover:to-blue-700"
                   >
                     Register Now

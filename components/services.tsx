@@ -32,6 +32,30 @@ const ServiceTimesSection: React.FC = () => {
       backgroundImage:
         "https://c.animaapp.com/nd94gfJc/img/https---www-pexels-com-photo-woman-in-blue-tank-top-and-man-in-r@2x.png",
     },
+    {
+      title: "DISCIPLESHIP CLASS",
+      time: "Monday 1600hrs (CAT)",
+      backgroundImage:
+        "https://c.animaapp.com/nd94gfJc/img/pexels-monstera-6238059@2x.png",
+    },
+    {
+      title: "YOUNG FOUNDERS",
+      time: "Tuesday 1200hrs (CAT)",
+      backgroundImage:
+        "https://c.animaapp.com/nd94gfJc/img/pexels-thirdman-7256681@2x.png",
+    },
+    {
+      title: "ONE WORD",
+      time: "Wednesday 1500hrs (CAT)",
+      backgroundImage:
+        "https://c.animaapp.com/nd94gfJc/img/pexels-kampus-5920772@2x.png",
+    },
+    {
+      title: "INTERNATIONAL HOMEGROUPS",
+      time: "Thursday 1300hrs (CAT)",
+      backgroundImage:
+        "https://c.animaapp.com/nd94gfJc/img/pexels-pavel-danilyuk-8005395@2x.png",
+    },
   ];
 
   return (

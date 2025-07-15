@@ -137,7 +137,7 @@ const AboutUsPage = () => {
         familyImages: ["family1.jpg", "family2.jpg", "family3.jpg"],
         title: "Apostle",
         socials: {
-          facebook: "https://www.facebook.com/apostletvutabwashe",
+          facebook: "https://www.facebook.com/ApostleTavongaVutabwashe",
           twitter: "https://x.com/T_Vutabwashe",
           instagram: "https://www.instagram.com/apostletvutabwashe/",
         },

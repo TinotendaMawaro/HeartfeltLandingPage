@@ -20,7 +20,7 @@ const quickLinks = [
 
 const socialLinks = [
   {
-    href: "https://www.facebook.com/HeartfeltTV/photos",
+    href: "https://www.facebook.com/HeartfeltTV",
     label: "Facebook",
     icon: FaFacebookF,
   },

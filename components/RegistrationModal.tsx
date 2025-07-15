@@ -5,9 +5,14 @@ import React, { useState } from "react";
 interface RegisterModalProps {
   isOpen: boolean;
   onClose: () => void;
+  firstTime?: boolean; // <-- New prop to handle first-time users
 }
 
-const RegisterModal: React.FC<RegisterModalProps> = ({ isOpen, onClose }) => {
+const RegisterModal: React.FC<RegisterModalProps> = ({
+  isOpen,
+  onClose,
+  firstTime = false,
+}) => {
   const [formData, setFormData] = useState({
     fullName: "",
     email: "",
@@ -26,7 +31,7 @@ const RegisterModal: React.FC<RegisterModalProps> = ({ isOpen, onClose }) => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    console.log("Form submitted:", formData);
+    console.log("Form submitted:", formData, "First Time:", firstTime);
     setSubmitted(true);
     setTimeout(() => {
       onClose();
@@ -59,13 +64,13 @@ const RegisterModal: React.FC<RegisterModalProps> = ({ isOpen, onClose }) => {
           id="modal-title"
           className="text-3xl font-extrabold text-center mb-6 bg-gradient-to-r from-blue-500 to-purple-500 bg-clip-text text-transparent"
         >
-          Event Registration
+          {firstTime ? "Welcome to Heartfelt!" : "Event Registration"}
         </h2>
 
         {/* Confirmation Message */}
         {submitted ? (
           <p className="text-green-600 text-center font-semibold text-lg">
-            🎉 Registration Successful!
+            🎉 {firstTime ? "Thanks for joining us!" : "Registration Successful!"}
           </p>
         ) : (
           <form onSubmit={handleSubmit} className="space-y-5">
@@ -162,6 +167,9 @@ const RegisterModal: React.FC<RegisterModalProps> = ({ isOpen, onClose }) => {
               >
                 <option value="" disabled>
                   Choose an event
+                </option>
+                <option value="Catch the Fire Conference">
+                  Catch the Fire Conference
                 </option>
                 <option value="Pastor Benny Hinn Conference">
                   Pastor Benny Hinn Conference
