@@ -2,6 +2,7 @@ import "./css/style.css";
 
 import { Inter } from "next/font/google";
 import localFont from "next/font/local";
+import { Analytics } from '@vercel/analytics/next';
 
 import Header from "@/components/ui/header";
 
@@ -57,6 +58,7 @@ export default function RootLayout({
           <Header />
           {children}
         </div>
+        <Analytics />
       </body>
     </html>
   );
