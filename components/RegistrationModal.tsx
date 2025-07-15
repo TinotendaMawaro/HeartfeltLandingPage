@@ -5,14 +5,19 @@ import React, { useState } from "react";
 interface RegisterModalProps {
   isOpen: boolean;
   onClose: () => void;
+  firstTime?: boolean; // <-- New prop to handle first-time users
 }
 
-const RegisterModal: React.FC<RegisterModalProps> = ({ isOpen, onClose }) => {
+const RegisterModal: React.FC<RegisterModalProps> = ({
+  isOpen,
+  onClose,
+  firstTime = false,
+}) => {
   const [formData, setFormData] = useState({
     fullName: "",
     email: "",
     phone: "",
-    zone: "",    
+    zone: "",
     event: "",
   });
 
@@ -26,7 +31,7 @@ const RegisterModal: React.FC<RegisterModalProps> = ({ isOpen, onClose }) => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    console.log("Form submitted:", formData);
+    console.log("Form submitted:", formData, "First Time:", firstTime);
     setSubmitted(true);
     setTimeout(() => {
       onClose();
@@ -42,30 +47,33 @@ const RegisterModal: React.FC<RegisterModalProps> = ({ isOpen, onClose }) => {
       aria-modal="true"
       role="dialog"
       aria-labelledby="modal-title"
-      className="fixed inset-0 z-50 bg-black bg-opacity-60 backdrop-blur-sm flex items-center justify-center p-4"
+      className="fixed inset-0 z-50 bg-black/30 backdrop-blur-sm flex items-center justify-center p-4"
     >
-      <div className="bg-white rounded-2xl shadow-2xl p-8 w-full max-w-lg relative transform transition-all duration-300 ease-in-out animate-fade-in-up">
+      <div className="bg-white rounded-2xl shadow-2xl p-8 w-full max-w-lg relative animate-fade-in-up transition-all duration-300">
+        {/* Close Button */}
         <button
           onClick={onClose}
           aria-label="Close registration modal"
-          className="absolute top-5 right-5 text-gray-400 hover:text-gray-700 transition-colors text-3xl font-bold focus:outline-none focus:ring-2 focus:ring-blue-500 rounded"
+          className="absolute top-5 right-5 text-gray-500 hover:text-gray-800 text-2xl font-bold focus:outline-none focus:ring-2 focus:ring-blue-500 rounded"
         >
           ×
         </button>
 
+        {/* Title */}
         <h2
           id="modal-title"
-          className="text-3xl font-extrabold text-center mb-6 text-gradient bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 bg-clip-text text-transparent"
+          className="text-3xl font-extrabold text-center mb-6 bg-gradient-to-r from-blue-500 to-purple-500 bg-clip-text text-transparent"
         >
-          Event Registration
+          {firstTime ? "Welcome to Heartfelt!" : "Event Registration"}
         </h2>
 
+        {/* Confirmation Message */}
         {submitted ? (
           <p className="text-green-600 text-center font-semibold text-lg">
-            🎉 Registration Successful!
+            🎉 {firstTime ? "Thanks for joining us!" : "Registration Successful!"}
           </p>
         ) : (
-          <form onSubmit={handleSubmit} className="space-y-6">
+          <form onSubmit={handleSubmit} className="space-y-5">
             <div>
               <label
                 htmlFor="fullName"
@@ -80,8 +88,8 @@ const RegisterModal: React.FC<RegisterModalProps> = ({ isOpen, onClose }) => {
                 required
                 value={formData.fullName}
                 onChange={handleChange}
-                className="w-full border border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition"
                 placeholder="Tinotenda Obrigado"
+                className="w-full border border-gray-300 rounded-lg px-4 py-3 focus:ring-2 focus:ring-blue-500 focus:outline-none transition"
               />
             </div>
 
@@ -90,7 +98,7 @@ const RegisterModal: React.FC<RegisterModalProps> = ({ isOpen, onClose }) => {
                 htmlFor="email"
                 className="block text-sm font-medium text-gray-700 mb-1"
               >
-                Email
+                Email Address
               </label>
               <input
                 id="email"
@@ -99,8 +107,8 @@ const RegisterModal: React.FC<RegisterModalProps> = ({ isOpen, onClose }) => {
                 required
                 value={formData.email}
                 onChange={handleChange}
-                className="w-full border border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition"
                 placeholder="heartfelt@example.com"
+                className="w-full border border-gray-300 rounded-lg px-4 py-3 focus:ring-2 focus:ring-blue-500 focus:outline-none transition"
               />
             </div>
 
@@ -118,12 +126,11 @@ const RegisterModal: React.FC<RegisterModalProps> = ({ isOpen, onClose }) => {
                 required
                 value={formData.phone}
                 onChange={handleChange}
-                className="w-full border border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition"
                 placeholder="+263 *** *** ***"
+                className="w-full border border-gray-300 rounded-lg px-4 py-3 focus:ring-2 focus:ring-blue-500 focus:outline-none transition"
               />
             </div>
 
-            {/* New Zone Field */}
             <div>
               <label
                 htmlFor="zone"
@@ -138,8 +145,8 @@ const RegisterModal: React.FC<RegisterModalProps> = ({ isOpen, onClose }) => {
                 required
                 value={formData.zone}
                 onChange={handleChange}
-                className="w-full border border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition"
                 placeholder="Enter your zone or area"
+                className="w-full border border-gray-300 rounded-lg px-4 py-3 focus:ring-2 focus:ring-blue-500 focus:outline-none transition"
               />
             </div>
 
@@ -156,10 +163,13 @@ const RegisterModal: React.FC<RegisterModalProps> = ({ isOpen, onClose }) => {
                 required
                 value={formData.event}
                 onChange={handleChange}
-                className="w-full border border-gray-300 rounded-lg px-4 py-3 bg-white focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition"
+                className="w-full border border-gray-300 rounded-lg px-4 py-3 bg-white focus:ring-2 focus:ring-blue-500 focus:outline-none transition"
               >
                 <option value="" disabled>
                   Choose an event
+                </option>
+                <option value="Catch the Fire Conference">
+                  Catch the Fire Conference
                 </option>
                 <option value="Pastor Benny Hinn Conference">
                   Pastor Benny Hinn Conference
@@ -173,7 +183,7 @@ const RegisterModal: React.FC<RegisterModalProps> = ({ isOpen, onClose }) => {
 
             <button
               type="submit"
-              className="w-full bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 text-white font-semibold py-3 rounded-lg shadow-lg hover:scale-105 transform transition-transform duration-300 ease-in-out focus:outline-none focus:ring-4 focus:ring-pink-400"
+              className="w-full bg-gradient-to-r from-blue-500 to-purple-500 text-white font-semibold py-3 rounded-lg shadow-md hover:shadow-lg hover:scale-[1.02] transition-transform focus:ring-4 focus:ring-blue-300"
             >
               Submit Registration
             </button>

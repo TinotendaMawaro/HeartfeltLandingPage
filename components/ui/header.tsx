@@ -220,6 +220,24 @@ export default function Header() {
                 </li>
               ))}
 
+              {/* Mobile Auth Buttons */}
+<div className="mt-6 space-y-3">
+  <Link
+    href="/signin"
+    className="block w-full text-center bg-gray-800 text-white py-2 rounded-md hover:bg-gray-700 transition break-words whitespace-normal"
+    onClick={() => setMobileMenuOpen(false)}
+  >
+    Sign In
+  </Link>
+  <Link
+    href="/signup"
+    className="block w-full text-center bg-indigo-600 text-white py-2 rounded-md hover:bg-indigo-700 transition break-words whitespace-normal"
+    onClick={() => setMobileMenuOpen(false)}
+  >
+    Register
+  </Link>
+</div>
+
               {/* Mobile "More" dropdown */}
               <li>
                 <button
