@@ -1,43 +1,71 @@
+
+import Link from "next/link";
+import Image from "next/image";
+import ResetBg from "@/public/images/sign-in.jpg"; // Use the same or a custom image
+
 export const metadata = {
   title: "Reset Password - Open PRO",
   description: "Page description",
 };
 
-import Link from "next/link";
-
 export default function ResetPassword() {
   return (
-    <section>
-      <div className="mx-auto max-w-6xl px-4 sm:px-6">
-        <div className="py-12 md:py-20">
-          {/* Section header */}
-          <div className="pb-12 text-center">
-            <h1 className="animate-[gradient_6s_linear_infinite] bg-[linear-gradient(to_right,var(--color-gray-200),var(--color-indigo-200),var(--color-gray-50),var(--color-indigo-300),var(--color-gray-200))] bg-[length:200%_auto] bg-clip-text font-nacelle text-3xl font-semibold text-transparent md:text-4xl">
-              Reset your password
-            </h1>
-          </div>
-          {/* Contact form */}
-          <form className="mx-auto max-w-[400px]">
+    <section className="min-h-screen flex flex-col lg:flex-row">
+      {/* Left Image Panel */}
+      <div className="relative w-full h-64 lg:h-auto lg:w-1/2">
+        <Image
+          src={ResetBg}
+          alt="Reset password background"
+          fill
+          className="object-cover"
+          priority
+        />
+      </div>
+
+      {/* Right Form Side */}
+      <div className="flex flex-col justify-center items-center w-full lg:w-1/2 px-6 sm:px-10 py-12 bg-gradient-to-tr from-[#eaf2fb] to-[#f5f9ff]">
+        <div className="w-full max-w-md bg-white rounded-2xl shadow-xl px-6 py-8 sm:p-10">
+          <h2 className="text-2xl sm:text-3xl font-semibold text-gray-800 mb-2">
+            Reset your password
+          </h2>
+          <p className="text-sm text-gray-500 mb-6">
+            Enter your email to receive a reset link.
+          </p>
+
+          <form className="space-y-6">
             <div>
               <label
-                className="mb-1 block text-sm font-medium text-indigo-200/65"
                 htmlFor="email"
+                className="block text-sm font-medium text-gray-700"
               >
                 Email
               </label>
               <input
                 id="email"
                 type="email"
-                className="form-input w-full"
+                className="form-input w-full mt-1 px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500"
                 placeholder="Your email"
+                required
               />
             </div>
-            <div className="mt-6">
-              <button className="btn w-full bg-linear-to-t from-indigo-600 to-indigo-500 bg-[length:100%_100%] bg-[bottom] text-white shadow-[inset_0px_1px_0px_0px_--theme(--color-white/.16)] hover:bg-[length:100%_150%]">
-                Reset Password
-              </button>
-            </div>
+
+            <button
+              type="submit"
+              className="w-full bg-indigo-600 hover:bg-indigo-700 text-white py-2 rounded-md font-medium transition"
+            >
+              Reset Password
+            </button>
           </form>
+
+          <div className="mt-6 text-sm text-center text-gray-600">
+            Remembered your password?{" "}
+            <Link
+              href="/signin"
+              className="text-indigo-600 font-medium hover:underline"
+            >
+              Sign in
+            </Link>
+          </div>
         </div>
       </div>
     </section>
