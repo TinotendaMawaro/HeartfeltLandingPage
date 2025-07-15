@@ -63,15 +63,15 @@ const ServiceTimesSection: React.FC = () => {
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
         {/* Section Header */}
         <div className="mx-auto max-w-3xl text-center mb-14">
-          <div className="inline-flex items-center gap-3 pb-3 before:h-px before:w-8 before:bg-gradient-to-r before:from-transparent before:to-indigo-400/50 after:h-px after:w-8 after:bg-gradient-to-l after:from-transparent after:to-indigo-400/50">
-            <span className="inline-flex bg-gradient-to-r from-indigo-500 to-indigo-300 bg-clip-text text-transparent font-semibold">
+          <div className="inline-flex items-center gap-3 pb-3 before:h-px before:w-8 before:bg-gradient-to-r before:from-transparent before:to-blue-400/50 after:h-px after:w-8 after:bg-gradient-to-l after:from-transparent after:to-blue-400/50">
+            <span className="inline-flex bg-gradient-to-r from-[#1E90FF] to-[#A3D1FF] bg-clip-text text-transparent font-semibold">
               Worship With Us
             </span>
           </div>
-          <h2 className="text-3xl md:text-4xl font-extrabold bg-gradient-to-r from-gray-700 via-indigo-600 to-gray-700 bg-clip-text text-transparent">
+          <h2 className="animate-[gradient_6s_linear_infinite] bg-[linear-gradient(to_right,#000000,rgba(0,0,0,0.5),#1E90FF,rgba(0,0,0,0.5),#000000)] bg-[length:200%_auto] bg-clip-text text-transparent font-['Montserrat'] text-3xl md:text-4xl lg:text-5xl font-extrabold uppercase leading-[64px] tracking-[-0.01em] drop-shadow-md">
             Our Service Times
           </h2>
-          <p className="text-gray-600 text-lg mt-4">
+          <p className="text-gray-900 mt-4 text-base sm:text-lg opacity-80 font-['Roboto Condensed']">
             Heartfelt International Ministries invites you to experience Spirit-led, transformative encounters through our weekly and daily services.
           </p>
         </div>
@@ -92,7 +92,7 @@ const ServiceTimesSection: React.FC = () => {
               <div className="absolute bottom-20 left-6 font-bold text-white text-lg group-hover:translate-y-[-2px] transition">
                 {service.title}
               </div>
-              <div className="absolute bottom-8 left-6 text-indigo-100 text-sm font-medium group-hover:translate-y-[-2px] transition">
+              <div className="absolute bottom-8 left-6 text-[#d0e6ff] text-sm font-medium group-hover:translate-y-[-2px] transition">
                 {service.time}
               </div>
             </div>
@@ -105,7 +105,7 @@ const ServiceTimesSection: React.FC = () => {
             href="https://www.youtube.com/@ApostleTavongaVutabwashe"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-block rounded-xl bg-gradient-to-r from-indigo-500 to-blue-500 px-8 py-4 text-white text-sm sm:text-base font-medium shadow-md hover:shadow-lg hover:scale-105 transition-transform"
+            className="inline-block rounded-xl bg-gradient-to-r from-[#1e90ff] to-blue-500 px-8 py-4 text-white text-sm sm:text-base font-medium shadow-md hover:shadow-lg hover:scale-105 transition-transform"
           >
             WATCH ONLINE
           </a>

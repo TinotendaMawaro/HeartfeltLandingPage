@@ -55,17 +55,17 @@ const EventsHighlightsSection: React.FC = () => {
     <section aria-label="Events Highlights Section" className="bg-white py-16 sm:py-20">
       <div className="mx-auto max-w-7xl px-6 sm:px-8 lg:px-12">
         <div className="mx-auto max-w-4xl pb-12 text-center md:pb-20">
-          <div className="inline-flex items-center gap-3 pb-3 before:h-px before:w-10 before:bg-gradient-to-r before:from-transparent before:to-blue-400/70 after:h-px after:w-10 after:bg-gradient-to-l after:from-transparent after:to-blue-400/70">
-            <span className="inline-flex bg-gradient-to-r from-black via-gray-700 to-black bg-clip-text text-transparent font-semibold text-sm sm:text-base">
+          <div className="inline-flex items-center gap-3 pb-3 before:h-px before:w-10 before:bg-gradient-to-r before:from-transparent before:to-blue-400/50 after:h-px after:w-10 after:bg-gradient-to-l after:from-transparent after:to-blue-400/50">
+            <span className="inline-flex bg-gradient-to-r from-[#1E90FF] to-[#A3D1FF] bg-clip-text text-transparent font-semibold text-sm sm:text-base">
               Join Us for Our Events
             </span>
           </div>
           <h2
-            className="relative pb-6 font-nacelle text-3xl font-extrabold text-transparent sm:text-4xl md:text-5xl bg-clip-text bg-gradient-to-r from-black via-gray-700 to-black animate-gradient-x"
+            className="animate-[gradient_6s_linear_infinite] bg-[linear-gradient(to_right,#000000,rgba(0,0,0,0.5),#1E90FF,rgba(0,0,0,0.5),#000000)] bg-[length:200%_auto] bg-clip-text text-transparent font-['Montserrat'] text-3xl md:text-4xl lg:text-5xl font-extrabold uppercase leading-[64px] tracking-[-0.01em] drop-shadow-md"
           >
             Events Highlights
           </h2>
-          <p className="mt-4 text-gray-900 text-base sm:text-lg md:text-xl max-w-2xl mx-auto">
+          <p className="mt-4 text-gray-900 text-base sm:text-lg md:text-xl max-w-2xl mx-auto font-['Roboto Condensed'] opacity-80">
             Join us as we celebrate and engage in transformative experiences through our highlighted events.
           </p>
         </div>
@@ -97,22 +97,6 @@ const EventsHighlightsSection: React.FC = () => {
           ))}
         </div>
       </div>
-
-      <style jsx>{`
-        @keyframes gradient-x {
-          0%,
-          100% {
-            background-position: 0% center;
-          }
-          50% {
-            background-position: 100% center;
-          }
-        }
-        .animate-gradient-x {
-          background-size: 200% auto;
-          animation: gradient-x 6s linear infinite;
-        }
-      `}</style>
     </section>
   );
 };

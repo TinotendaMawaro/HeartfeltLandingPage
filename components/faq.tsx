@@ -41,19 +41,19 @@ export const FaqSection: React.FC = () => {
   ];
 
   return (
-    <section className="bg-white py-20">
+    <section className="py-20 bg-gray-50">
       <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
         {/* Section Header */}
         <div className="text-center mb-16 max-w-2xl mx-auto">
-          <div className="inline-flex items-center gap-3 pb-3 before:h-px before:w-10 before:bg-gradient-to-r before:from-transparent before:to-blue-400/70 after:h-px after:w-10 after:bg-gradient-to-l after:from-transparent after:to-blue-400/70">
-            <span className="inline-flex bg-gradient-to-r from-black via-gray-700 to-black bg-clip-text text-transparent font-semibold text-sm sm:text-base">
+          <div className="inline-flex items-center gap-3 pb-3 before:h-px before:w-10 before:bg-gradient-to-r before:from-transparent before:to-blue-400/50 after:h-px after:w-10 after:bg-gradient-to-l after:from-transparent after:to-blue-400/50">
+            <span className="inline-flex bg-gradient-to-r from-[#1E90FF] to-[#A3D1FF] bg-clip-text text-transparent font-semibold text-sm sm:text-base">
               Find Answers to Common Questions
             </span>
           </div>
-          <h2 className="text-3xl md:text-4xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-black via-gray-700 to-black animate-gradient-x">
+          <h2 className="animate-[gradient_6s_linear_infinite] bg-[linear-gradient(to_right,#000000,rgba(0,0,0,0.5),#1E90FF,rgba(0,0,0,0.5),#000000)] bg-[length:200%_auto] bg-clip-text text-transparent font-['Montserrat'] text-3xl md:text-4xl lg:text-5xl font-extrabold uppercase leading-[64px] tracking-[-0.01em] drop-shadow-md">
             Need Help? We've Got You.
           </h2>
-          <p className="text-gray-800 text-lg mt-4">
+          <p className="text-gray-900 mt-4 text-base sm:text-lg opacity-80 font-['Roboto Condensed']">
             Find answers to common questions and take your next step with Heartfelt International Ministries.
           </p>
         </div>
@@ -63,19 +63,19 @@ export const FaqSection: React.FC = () => {
           {faqData.map((faq, index) => (
             <div
               key={index}
-              className="h-full rounded-2xl overflow-hidden shadow-md bg-white border border-gray-200 p-6 flex flex-col transition duration-300 hover:shadow-blue-400/40"
+              className="h-full rounded-2xl overflow-hidden shadow-md bg-white border border-blue-200/50 p-6 flex flex-col transition duration-300 hover:shadow-lg hover:bg-blue-50/50"
             >
               <div className="flex-1">
-                <p className="text-sm font-semibold bg-gradient-to-r from-blue-500 to-blue-300 bg-clip-text text-transparent mb-2 uppercase tracking-wide">
+                <p className="text-sm font-semibold bg-gradient-to-r from-[#1E90FF] to-[#A3D1FF] bg-clip-text text-transparent mb-2 uppercase tracking-wide">
                   {faq.category}
                 </p>
-                <h3 className="text-gray-900 text-lg font-bold mb-4">
+                <h3 className="text-gray-900 text-lg font-bold mb-4 font-['Montserrat']">
                   {faq.question}
                 </h3>
-                <p className="text-gray-600 text-sm">{faq.description}</p>
+                <p className="text-gray-900 text-sm opacity-80 font-['Roboto Condensed']">{faq.description}</p>
               </div>
               <div className="mt-6 flex justify-center">
-                <button className="px-6 py-3 rounded-xl bg-gradient-to-b from-blue-400 to-blue-600 text-white text-sm font-semibold shadow-md transition hover:from-blue-500 hover:to-blue-700">
+                <button className="px-6 py-3 rounded-xl bg-gradient-to-b from-[#1e90ff] to-blue-600 text-white text-sm font-semibold shadow-md transition hover:from-blue-500 hover:to-blue-700">
                   {faq.buttonText}
                 </button>
               </div>
@@ -83,23 +83,6 @@ export const FaqSection: React.FC = () => {
           ))}
         </div>
       </div>
-
-      {/* Local Styles */}
-      <style jsx>{`
-        @keyframes gradientMove {
-          0% {
-            background-position: 0% center;
-          }
-          100% {
-            background-position: 200% center;
-          }
-        }
-
-        .animate-gradient-x {
-          background-size: 200% auto;
-          animation: gradientMove 6s linear infinite;
-        }
-      `}</style>
     </section>
   );
 };
