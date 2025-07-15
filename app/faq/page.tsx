@@ -13,7 +13,6 @@ import WebLandingImage from "@/public/images/web-landing-.jpg"; // You can use a
 export default function FaqPage() {
   return (
     <>
-      <PageIllustration />
 
       {/* Hero Header with Background Image */}
       <section className="relative w-full min-h-[500px] flex items-center justify-center text-center text-white">

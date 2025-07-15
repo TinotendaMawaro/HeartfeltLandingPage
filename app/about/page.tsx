@@ -13,7 +13,6 @@ import AboutUsPage from "@/components/About";
 export default function AboutPage() {
   return (
     <>
-      <PageIllustration />
 
       {/* Hero Section */}
       <section className="relative w-full min-h-[500px] flex items-center justify-center text-center text-white">
