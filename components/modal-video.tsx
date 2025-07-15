@@ -47,7 +47,7 @@ export default function ModalVideo({
         data-aos="fade-up"
         data-aos-delay={200}
       >
-        <figure className="relative w-full before:absolute before:inset-0 before:bg-gradient-to-br before:from-gray-900/80 before:via-indigo-700/30 before:to-gray-900/80 before:z-10">
+<figure className="relative w-full -mt-5 before:absolute before:inset-0 before:bg-gradient-to-br before:from-gray-900/80 before:via-indigo-700/30 before:to-gray-900/80 before:z-10">
           <Image
             className="w-full grayscale opacity-60 transition-all duration-300 group-hover:opacity-80 group-hover:grayscale-0"
             src={thumb}

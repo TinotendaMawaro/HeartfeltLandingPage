@@ -4,11 +4,11 @@ import Image from "next/image";
 import Logo from "@/public/images/logos-04.png";
 import VideoThumb from "@/public/images/web-landing-.jpg";
 import ModalVideo from "@/components/modal-video";
-import BgImage from "@/public/images/web-landing-.jpg"; // <-- Static import for background
+import BgImage from "@/public/images/web-landing- 2.png"; // <-- Static import for background
 
 export default function HeroHome() {
   return (
-    <section className="relative w-full min-h-[720px] text-white">
+    <section className="relative w- min-h-[720px] text-white">
       {/* Background Image */}
       <div className="absolute inset-0 -z-10">
         <Image
@@ -18,7 +18,7 @@ export default function HeroHome() {
           className="object-cover object-center"
           priority
         />
-        <div className="absolute inset-0 bg-blue-900/30" />
+        <div className="absolute inset-0 bg-black/40" />
       </div>
 
       {/* Hero content */}
