@@ -83,7 +83,7 @@ const AboutUsPage = () => {
               },
               {
                 title: "SIGNIFICANT PROGRESS",
-                image: "flameBridge.jpg",
+                image: "FlameBridge.jpg",
                 text: "God's anointing is abundant in our commission, with mass manifestations, precise prophecies, and undeniable breakthroughs across regions.",
               },
               {
