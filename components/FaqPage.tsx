@@ -110,7 +110,7 @@ const faqCategories = [
     ],
   },
   {
-    title: "Technical Support",
+    title: "Technical Support & Career Opportunities",
     icon: "⚙️",
     items: [
       {
