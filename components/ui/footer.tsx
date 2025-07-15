@@ -13,9 +13,9 @@ import {
 
 const quickLinks = [
   { label: "About Us", href: "/about" },
-  { label: "Zones", href: "#" },
+  { label: "Zones", href: "/zones" },
   { label: "Events", href: "/events" },
-  { label: "Heartfelt Institute", href: "#" },
+  { label: "Heartfelt Institute", href: "/institute"},
 ];
 
 const socialLinks = [

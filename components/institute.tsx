@@ -7,26 +7,6 @@ import Image from "next/image";
 const HeartfeltInstitute = () => {
   return (
     <div className="bg-white text-gray-800">
-      {/* Hero Section */}
-      <section className="relative h-[400px] w-full overflow-hidden">
-        <Image
-          src="/images/Institute.jpg"
-          alt="Heartfelt Institute"
-          layout="fill"
-          objectFit="cover"
-          className="brightness-[.6]"
-        />
-        <div className="absolute inset-0 flex items-center justify-center">
-          <motion.h1
-            initial={{ opacity: 0, y: 40 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-white text-4xl md:text-6xl font-bold text-center px-4"
-          >
-            Heartfelt Institute
-          </motion.h1>
-        </div>
-      </section>
 
       {/* About Section */}
       <section className="max-w-5xl mx-auto py-16 px-6">
@@ -35,7 +15,8 @@ const HeartfeltInstitute = () => {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
         >
-          <h2 className="text-3xl font-semibold mb-4">About the Institute</h2>
+          <h2 className="text-3xl font-semibold mb-4 text-center">About the Institute</h2>
+
           <p className="text-lg text-gray-700 leading-relaxed">
             The Heartfelt Institute is committed to developing Kingdom leaders
             who walk in faith, wisdom, and spiritual maturity. Through a
@@ -52,7 +33,7 @@ const HeartfeltInstitute = () => {
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             transition={{ duration: 0.5 }}
-            className="text-2xl font-semibold mb-8"
+            className="text-2xl font-semibold mb-8 text-center"
           >
             Courses Offered
           </motion.h3>

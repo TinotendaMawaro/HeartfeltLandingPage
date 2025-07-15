@@ -1,12 +1,11 @@
 'use client';
 
-import React from 'react';
-import Image from 'next/image';
-import HeartfeltInstitute from '@/components/institute';
-import Footer from '@/components/ui/footer';
-import WebLandingImage from '@/public/images/web-landing-.jpg'; // Replace with a more institute-relevant image if available
+import Image from "next/image";
+import DepartmentsPage from "@/components/departments";
+import Footer from "@/components/ui/footer";
+import WebLandingImage from "@/public/images/web-landing-.jpg"; // Replace with your own image if needed
 
-const InstitutePage = () => {
+export default function Page() {
   return (
     <>
       {/* Hero Header with Background Image */}
@@ -15,7 +14,7 @@ const InstitutePage = () => {
         <div className="absolute inset-0 -z-10">
           <Image
             src={WebLandingImage}
-            alt="Heartfelt Institute Background"
+            alt="Departments Background"
             fill
             className="object-cover object-center"
             priority
@@ -26,22 +25,20 @@ const InstitutePage = () => {
         {/* Hero Content */}
         <div className="px-6 sm:px-10 max-w-4xl z-10">
           <h1 className="animate-[gradient_6s_linear_infinite] bg-[linear-gradient(to_right,var(--color-gray-200),var(--color-indigo-200),var(--color-gray-50),var(--color-indigo-300),var(--color-gray-200))] bg-[length:200%_auto] bg-clip-text pb-4 font-nacelle text-3xl font-semibold text-transparent md:text-4xl">
-            Heartfelt Institute
+            Our Church Departments
           </h1>
           <p className="animate-[gradient_6s_linear_infinite] bg-[linear-gradient(to_right,var(--color-gray-200),var(--color-indigo-200),var(--color-gray-50),var(--color-indigo-300),var(--color-gray-200))] bg-[length:200%_auto] bg-clip-text text-transparent text-base md:text-lg">
-            Empowering leaders, ministers, and members through sound biblical education and training.
+            Explore the ministries and departments that make up Heartfelt International Ministries.
           </p>
         </div>
       </section>
 
-      {/* Institute Section */}
-      <main className="bg-white py-16 px-4 sm:px-6 lg:px-8">
-        <HeartfeltInstitute />
-      </main>
+      {/* Departments Section */}
+      <section>
+        <DepartmentsPage />
+      </section>
 
       <Footer />
     </>
   );
-};
-
-export default InstitutePage;
+}

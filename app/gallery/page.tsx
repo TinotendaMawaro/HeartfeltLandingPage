@@ -1,21 +1,19 @@
 'use client';
 
-import React from 'react';
 import Image from 'next/image';
-import HeartfeltInstitute from '@/components/institute';
+import Gallery from '@/components/gallery';
 import Footer from '@/components/ui/footer';
-import WebLandingImage from '@/public/images/web-landing-.jpg'; // Replace with a more institute-relevant image if available
+import WebLandingImage from '@/public/images/web-landing-.jpg'; // Replace with your gallery hero image
 
-const InstitutePage = () => {
+export default function GalleryPage() {
   return (
     <>
       {/* Hero Header with Background Image */}
       <section className="relative w-full min-h-[500px] flex items-center justify-center text-center text-white">
-        {/* Background Image */}
         <div className="absolute inset-0 -z-10">
           <Image
             src={WebLandingImage}
-            alt="Heartfelt Institute Background"
+            alt="Gallery Hero"
             fill
             className="object-cover object-center"
             priority
@@ -23,25 +21,22 @@ const InstitutePage = () => {
           <div className="absolute inset-0 bg-black/60" />
         </div>
 
-        {/* Hero Content */}
         <div className="px-6 sm:px-10 max-w-4xl z-10">
           <h1 className="animate-[gradient_6s_linear_infinite] bg-[linear-gradient(to_right,var(--color-gray-200),var(--color-indigo-200),var(--color-gray-50),var(--color-indigo-300),var(--color-gray-200))] bg-[length:200%_auto] bg-clip-text pb-4 font-nacelle text-3xl font-semibold text-transparent md:text-4xl">
-            Heartfelt Institute
+            Our Gallery
           </h1>
-          <p className="animate-[gradient_6s_linear_infinite] bg-[linear-gradient(to_right,var(--color-gray-200),var(--color-indigo-200),var(--color-gray-50),var(--color-indigo-300),var(--color-gray-200))] bg-[length:200%_auto] bg-clip-text text-transparent text-base md:text-lg">
-            Empowering leaders, ministers, and members through sound biblical education and training.
+          <p className="text-transparent bg-clip-text bg-gradient-to-r from-indigo-200 via-gray-100 to-purple-200 text-base md:text-lg">
+            Explore the beauty of fellowship, worship, and outreach through our shared memories.
           </p>
         </div>
       </section>
 
-      {/* Institute Section */}
-      <main className="bg-white py-16 px-4 sm:px-6 lg:px-8">
-        <HeartfeltInstitute />
-      </main>
+      {/* Gallery Section */}
+      <section>
+        <Gallery />
+      </section>
 
       <Footer />
     </>
   );
-};
-
-export default InstitutePage;
+}
