@@ -4,11 +4,17 @@ import Image from "next/image";
 import Link from "next/link";
 import Logo from "./logo";
 import FooterIllustration from "@/public/images/footer-illustration.svg";
+import {
+  FaFacebookF,
+  FaTwitter,
+  FaInstagram,
+  FaYoutube,
+} from "react-icons/fa";
 
 const quickLinks = [
-  { label: "About Us", href: "#" },
+  { label: "About Us", href: "/about" },
   { label: "Zones", href: "#" },
-  { label: "Events", href: "#" },
+  { label: "Events", href: "/events" },
   { label: "Heartfelt Institute", href: "#" },
 ];
 
@@ -16,22 +22,22 @@ const socialLinks = [
   {
     href: "https://www.facebook.com/HeartfeltTV/photos",
     label: "Facebook",
-    imgSrc: "https://c.animaapp.com/nd94gfJc/img/facebook---negative.svg",
+    icon: FaFacebookF,
   },
   {
     href: "https://x.com/HeartfeltTV",
-    label: "X (Twitter)",
-    imgSrc: "https://c.animaapp.com/nd94gfJc/img/twitter---negative.svg",
+    label: "Twitter",
+    icon: FaTwitter,
   },
   {
     href: "https://www.instagram.com/apostletvutabwashe/",
     label: "Instagram",
-    imgSrc: "https://c.animaapp.com/nd94gfJc/img/group-1@2x.png",
+    icon: FaInstagram,
   },
   {
     href: "https://www.youtube.com/@ApostleTavongaVutabwashe",
     label: "YouTube",
-    imgSrc: "https://c.animaapp.com/nd94gfJc/img/youtube.svg",
+    icon: FaYoutube,
   },
 ];
 
@@ -88,20 +94,16 @@ export default function Footer() {
           <div className="space-y-4 sm:space-y-5">
             <h3 className="text-lg font-semibold">Connect</h3>
             <div className="flex gap-4 items-center">
-              {socialLinks.map(({ href, label, imgSrc }) => (
+              {socialLinks.map(({ href, label, icon: Icon }) => (
                 <a
                   key={label}
                   href={href}
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label={label}
-                  className="hover:opacity-80 transition-opacity duration-200"
+                  className="hover:text-indigo-400 transition text-xl sm:text-2xl"
                 >
-                  <img
-                    src={imgSrc}
-                    alt={label}
-                    className="w-5 h-5 sm:w-6 sm:h-6 md:w-7 md:h-7"
-                  />
+                  <Icon />
                 </a>
               ))}
             </div>
@@ -133,7 +135,7 @@ export default function Footer() {
           </div>
         </div>
 
-        {/* Footer copyright */}
+        {/* Copyright */}
         <div className="border-t border-gray-700 py-4 text-center text-xs sm:text-sm text-gray-400">
           © {new Date().getFullYear()} Heartfelt Media. All rights reserved.
         </div>
