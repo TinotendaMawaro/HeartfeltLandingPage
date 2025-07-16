@@ -3,6 +3,7 @@
 import React, { useState } from "react";
 import Image from "next/image";
 import RegisterModal from "@/components/RegistrationModal";
+import FeaturedEventSection from "./FeaturedEventSection";
 
 const events = [
   {
@@ -100,6 +101,9 @@ const EventsPage: React.FC = () => {
             </p>
           </div>
 
+          {/* Insert FeaturedEventSection here */}
+          <FeaturedEventSection />
+
           {/* First Time CTA */}
           <div className="text-center mb-12">
             <button
@@ -122,7 +126,6 @@ const EventsPage: React.FC = () => {
               First time? Please click here.
             </button>
           </div>
-
 
           {/* Event cards */}
           <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
