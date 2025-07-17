@@ -123,7 +123,7 @@ const AboutUsPage = () => {
           {/* Vision 2 - Added mt-8 for top margin on mobile, md:mt-0 to reset on larger screens */}
           <div className="mt-8 md:mt-0">
             <p className="text-xs uppercase tracking-wider text-gray-600 mb-2">
-              OUR VISION
+              OUR MISSION
             </p>
             <h2 className="font-extrabold text-lg md:text-xl mb-4 text-[#1E90FF] leading-snug">
               BRINGING PEACE AND JOY TO THE WORLD
