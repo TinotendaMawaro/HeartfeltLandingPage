@@ -62,75 +62,78 @@ const AboutUsPage = () => {
     <>
       <div className="bg-white min-h-screen font-inter"> {/* Added font-inter here */}
         {/* Welcome Section */}
-        <section className="max-w-5xl mx-auto text-center px-4 py-16 sm:px-6 lg:px-8 animate-fade-in-up">
-          <p className="text-xs uppercase mb-2 text-gray-600">WELCOME TO OUR CHURCH</p>
-          <h1 className="text-3xl md:text-4xl font-extrabold mb-6 animate-[gradient_6s_linear_infinite] bg-[length:200%_auto] bg-gradient-to-r from-black via-[#1E90FF] to-black bg-clip-text text-transparent">
-            ONE CHURCH MANY LOCATIONS
-          </h1>
-          <p className="text-gray-700 max-w-3xl mx-auto mb-16 text-sm md:text-base leading-relaxed">
-            Heartfelt International Ministries is a global Christian movement founded by Apostle T. Vutabwashe and Pastor C. Vutabwashe. Rooted in a bold vision to raise a generation of Kingdom-minded believers, Heartfelt is a dynamic, Spirit-led church known for its vibrant worship, life-transforming teachings, and unwavering commitment to building God's Kingdom across the nations.
-          </p>
+         <section className="max-w-5xl mx-auto text-center text-transparent bg-clip-text bg-gradient-to-r from-black via-blue-600 to-black mb-4 animate-[gradient_6s_linear_infinite] pt-20 pb-30"> {/* Added fade-in animation */}
+        <p className="text-xs uppercase mb-2 text-gray-600">WELCOME TO OUR CHURCH</p>
+        <h1 className="text-3xl md:text-4xl font-extrabold mb-6 animate-[gradient_6s_linear_infinite] bg-[length:200%_auto] bg-gradient-to-r from-black via-[#1E90FF] to-black bg-clip-text text-transparent">
+          ONE CHURCH MANY LOCATIONS
+        </h1>
+        <p className="text-gray-700 max-w-3xl mx-auto mb-16 text-sm md:text-base leading-relaxed">
+          Heartfelt International Ministries is a global Christian movement founded by Apostle T. Vutabwashe and Pastor C. Vutabwashe. Rooted in a bold vision to raise a generation of Kingdom-minded believers, Heartfelt is a dynamic, Spirit-led church known for its vibrant worship, life-transforming teachings, and unwavering commitment to building God's Kingdom across the nations.
+        </p>
 
-          {/* Images Row - Adjusted sizes for responsiveness and added hover effect to middle image */}
-          <div className="flex flex-col md:flex-row justify-center items-center gap-6 md:gap-10 mb-20">
-            {/* Left Image */}
-            <div className="w-full sm:w-[486px] h-[604px] relative rounded-3xl overflow-hidden shadow-lg transition-transform duration-300 hover:scale-105">
-              <Image
-                src="/images/feature2.png"
-                alt="Apostle speaking"
-                fill
-                priority
-              />
-            </div>
-            {/* Middle Image - Wider by default and hover effect, increased height */}
-            <div className="w-full sm:w-[668px] h-[822px] relative rounded-3xl overflow-hidden shadow-lg transition-transform duration-300 hover:scale-105 z-10">
-              <Image
-                src="/images/feature1.png"
-                alt="Pastor preaching"
-                fill
-                priority
-              />
-            </div>
-            {/* Right Image */}
-            <div className="w-full sm:w-[486px] h-[604px] relative rounded-3xl overflow-hidden shadow-lg transition-transform duration-300 hover:scale-105">
-              <Image
-                src="/images/feature3.png"
-                alt="Prayer session"
-                fill
-                priority
-              />
-            </div>
+        {/* Images Row - Adjusted sizes for responsiveness and added hover effect to middle image */}
+        <div className="flex flex-col md:flex-row justify-center items-center gap-6 md:gap-10 mb-20"> {/* Added responsive flex and gap */}
+          {/* Left Image */}
+          <div className="w-full sm:w-80 h-92 relative rounded-3xl overflow-hidden shadow-lg transition-transform duration-300 hover:scale-105"> {/* Added responsive width and transition */}
+            <Image
+              src="/images/feature2.png"
+              alt="Apostle speaking"
+              fill
+              className="object-cover"
+              priority
+            />
+          </div>
+          {/* Middle Image - Wider by default and hover effect, increased height */}
+          <div className="w-full sm:w-100 h-110 relative rounded-3xl overflow-hidden shadow-lg transition-transform duration-300 hover:scale-105 z-10"> {/* Added responsive width and transition */}
+            <Image
+              src="/images/feature3.png"
+              alt="Prayer session"
+              fill
+              className="object-cover"
+              priority
+            />
+          </div>
+          {/* Right Image */}
+          <div className="w-full sm:w-80 h-92 relative rounded-3xl overflow-hidden shadow-lg transition-transform duration-300 hover:scale-105"> {/* Added responsive width and transition */}
+            <Image
+              src="/images/feature1.png"
+              alt="Pastor preaching"
+              fill
+              className="object-cover"
+              priority
+            />
+          </div>
+        </div>
+
+        {/* Vision statements - `items-end` aligns the entire content block to the bottom of the grid cell */}
+        <div className="max-w-4xl mx-auto grid gap-8 md:gap-12 md:grid-cols-2 items-end animate-fade-in-up"> {/* Added responsive gap and animation */}
+          {/* Vision 1 */}
+          <div>
+            <p className="text-xs uppercase tracking-wider text-gray-600 mb-2">
+              OUR VISION
+            </p>
+            <h2 className="font-extrabold text-lg md:text-xl mb-4 text-[#1E90FF] leading-snug">
+              STRIVING FOR A BETTER TOMORROW
+            </h2>
+            <p className="text-gray-700 text-sm md:text-base leading-relaxed">
+              To perpetuate the ministry of Christ on earth by obeying the great commission and balancing high spirituality and high professionalism, creating a home for races where gifts and skills are discovered, developed and celebrated.
+            </p>
           </div>
 
-          {/* Vision statements - `items-end` aligns the entire content block to the bottom of the grid cell */}
-          <div className="max-w-4xl mx-auto grid gap-8 md:gap-12 md:grid-cols-2 items-end animate-fade-in-up">
-            {/* Vision 1 */}
-            <div>
-              <p className="text-xs uppercase tracking-wider text-gray-600 mb-2">
-                OUR VISION
-              </p>
-              <h2 className="font-extrabold text-lg md:text-xl mb-4 text-[#1E90FF] leading-snug">
-                STRIVING FOR A BETTER TOMORROW
-              </h2>
-              <p className="text-gray-700 text-sm md:text-base leading-relaxed">
-                To perpetuate the ministry of Christ on earth by obeying the great commission and balancing high spirituality and high professionalism, creating a home for races where gifts and skills are discovered, developed and celebrated.
-              </p>
-            </div>
-
-            {/* Vision 2 - Added mt-8 for top margin on mobile, md:mt-0 to reset on larger screens */}
-            <div className="mt-8 md:mt-0">
-              <p className="text-xs uppercase tracking-wider text-gray-600 mb-2">
-                OUR VISION
-              </p>
-              <h2 className="font-extrabold text-lg md:text-xl mb-4 text-[#1E90FF] leading-snug">
-                BRINGING PEACE AND JOY TO THE WORLD
-              </h2>
-              <p className="text-gray-700 text-sm md:text-base leading-relaxed">
-                To minister in the power of the HOLY SPIRIT, to promote righteousness, love, peace, respect and personal development in the LORD; celebrating unity and embracing diversity in the church and the nation whilst transforming the world through Bible-based teachings.
-              </p>
-            </div>
+          {/* Vision 2 - Added mt-8 for top margin on mobile, md:mt-0 to reset on larger screens */}
+          <div className="mt-8 md:mt-0">
+            <p className="text-xs uppercase tracking-wider text-gray-600 mb-2">
+              OUR VISION
+            </p>
+            <h2 className="font-extrabold text-lg md:text-xl mb-4 text-[#1E90FF] leading-snug">
+              BRINGING PEACE AND JOY TO THE WORLD
+            </h2>
+            <p className="text-gray-700 text-sm md:text-base leading-relaxed">
+              To minister in the power of the HOLY SPIRIT, to promote righteousness, love, peace, respect and personal development in the LORD; celebrating unity and embracing diversity in the church and the nation whilst transforming the world through Bible-based teachings.
+            </p>
           </div>
-        </section>
+        </div>
+      </section>
 
         {/* Ministries Section - Updated to match the screenshot layout */}
         <section className="bg-gray-50 py-16 px-6 font-inter">
