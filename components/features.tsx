@@ -103,34 +103,8 @@ function Features() {
         </div>
       </div>
 
-      <div className="mt-16 flex flex-col sm:flex-row items-center justify-center gap-6">
-        {images.map((img, i) => (
-          <div
-            key={i}
-            className={`w-full sm:w-[350px] ${i === 1 ? 'sm:w-[450px] sm:h-[600px]' : 'sm:h-[450px]'} h-[400px] rounded-[30px] overflow-hidden transition-transform duration-300 hover:scale-105 cursor-pointer`}
-          >
-            <img src={img.src} alt={img.alt} className="object-contain w-full h-full" />
-          </div>
-        ))}
-      </div>
-
-      <div className="mt-16 max-w-xl mx-auto text-center">
-        <div className="text-sm sm:text-base font-semibold uppercase animate-[gradient_6s_linear_infinite] bg-[linear-gradient(to_right,#1E90FF,rgba(30,144,255,0.5),#1E90FF)] bg-clip-text text-transparent">
-          Our Mission & Vision
-        </div>
-        <h3 className="animate-[gradient_6s_linear_infinite] bg-[linear-gradient(to_right,#1E90FF,rgba(30,144,255,0.5),#1E90FF)] bg-[length:200%_auto] bg-clip-text text-transparent relative font-['Roboto Condensed'] text-[32px] tracking-[-0.01em] leading-[64px] uppercase inline-block text-center">
-          FELLOWSHIP WITH US
-        </h3>
-        <p className="mt-4 text-base sm:text-lg text-gray-900 opacity-80">
-          Heartfelt International Ministries is dedicated to raising a generation of believers rooted in faith, empowered by the Holy Spirit, and committed to impacting their world for Christ. Our mission is to spread the Gospel, nurture disciples, and build strong, vibrant communities
-        </p>
-      </div>
-
-      <div className="mt-10 flex justify-center">
-        <a href="#about" className="inline-block rounded-xl bg-gradient-to-r from-[#1e90ff] to-[#007bff] px-6 py-3 text-white text-base font-medium shadow-lg transition-all duration-300 hover:scale-105 hover:shadow-xl">
-          OUR STORY
-        </a>
-      </div>
+    
+  
     </section>
   );
 }

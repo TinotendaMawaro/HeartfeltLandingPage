@@ -1,4 +1,3 @@
-
 "use client"; // Add this directive at the very top
 
 import React from 'react';
@@ -84,14 +83,13 @@ function Workflows() {
     <section className="bg-white font-['Inter'] text-base text-black py-12 md:py-20">
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
         <div className="pb-12 md:pb-20">
-          {/* Section header */}
-          <div className="mx-auto max-w-3xl pb-12 text-center md:pb-20">
-          <h2 className="animate-[gradient_6s_linear_infinite] bg-[linear-gradient(to_right,#000000,rgba(0,0,0,0.5),#1E90FF,rgba(0,0,0,0.5),#000000)] bg-[length:200%_auto] bg-clip-text text-transparent relative font-['Roboto Condensed'] text-[32px] tracking-[-0.01em] leading-[64px] uppercase inline-block text-center">
-            ONE CHURCH MANY LOCATIONS
+          <div className="text-center mb-16 max-w-3xl mx-auto">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-black via-blue-600 to-black mb-4 animate-[gradient_6s_linear_infinite]">
+            One Church Many Locations
           </h2>
-            <p className="text-lg text-gray-900 font-['Roboto Condensed']">
-              Discover your place in our vibrant community — whether you're finding a Heartfelt zone near you, staying updated with powerful upcoming events, or getting involved through service. There’s always a way to connect, grow, and belong.
-            </p>
+          <p className="text-lg text-gray-700 font-['Roboto Condensed']">
+            Discover your place in our vibrant community — whether you're finding a Heartfelt zone near you, staying updated with powerful upcoming events, or getting involved through service. There’s always a way to connect, grow, and belong.
+          </p>
           </div>
           {/* Spotlight items */}
           <Spotlight className="group mx-auto grid max-w-sm items-start gap-6 lg:max-w-none lg:grid-cols-3">
