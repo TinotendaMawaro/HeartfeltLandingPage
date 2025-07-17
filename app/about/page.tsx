@@ -7,7 +7,7 @@ export const metadata = {
 import Image from "next/image";
 import PageIllustration from "@/components/page-illustration";
 import Footer from "@/components/ui/footer";
-import WebLandingImage from "@/public/images/web-landing-.jpg";
+import WebLandingImage from "@/public/images/hero 5.jpg";
 import AboutUsPage from "@/components/About";
 
 export default function AboutPage() {
@@ -22,7 +22,8 @@ export default function AboutPage() {
             src={WebLandingImage}
             alt="About Background"
             fill
-            className="object-cover object-center"
+            className="object-cover
+            "
             priority
           />
           <div className="absolute inset-0 bg-black/60" />

@@ -5,7 +5,7 @@ import Booking from '@/components/booking';
 import { motion } from 'framer-motion';
 import Footer from '@/components/ui/footer';
 import Image from 'next/image';
-import WebLandingImage from '@/public/images/web-landing-.jpg'; // Replace with your actual image if needed
+import WebLandingImage from '@/public/images/hero 5.jpg'; // Replace with your actual image if needed
 
 const BookingPage = () => {
   return (

@@ -3,7 +3,7 @@
 import Image from "next/image";
 import ZonesPage from "@/components/zones";
 import Footer from "@/components/ui/footer";
-import WebLandingImage from "@/public/images/web-landing-.jpg"; // Update to your actual zones image
+import WebLandingImage from "@/public/images/hero 5.jpg"; // Update to your actual zones image
 
 export default function Page() {
   return (

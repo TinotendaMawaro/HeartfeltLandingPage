@@ -8,7 +8,7 @@ import PageIllustration from "@/components/page-illustration";
 import FaqSectionFull from "@/components/FaqPage";
 import Cta from "@/components/cta";
 import Footer from "@/components/ui/footer";
-import WebLandingImage from "@/public/images/web-landing-.jpg"; // You can use another relevant image here
+import WebLandingImage from "@/public/images/hero 5.jpg"; // You can use another relevant image here
 
 export default function FaqPage() {
   return (

@@ -8,7 +8,7 @@ import PageIllustration from "@/components/page-illustration";
 import EventsHighlightsSection from "@/components/events";
 import EventsPageFull from "@/components/EventsPage";
 import Footer from "@/components/ui/footer";
-import WebLandingImage from "@/public/images/web-landing-.jpg";
+import WebLandingImage from "@/public/images/hero 5.jpg"; 
 
 export default function EventsPage() {
   return (

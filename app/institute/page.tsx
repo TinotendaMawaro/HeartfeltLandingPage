@@ -4,7 +4,7 @@ import React from 'react';
 import Image from 'next/image';
 import HeartfeltInstitute from '@/components/institute';
 import Footer from '@/components/ui/footer';
-import WebLandingImage from '@/public/images/web-landing-.jpg'; // Replace with a more institute-relevant image if available
+import WebLandingImage from '@/public/images/school1.jpg'; // Replace with a more institute-relevant image if available
 
 const InstitutePage = () => {
   return (

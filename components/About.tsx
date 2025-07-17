@@ -39,7 +39,7 @@ const AboutUsPage = () => {
     {
       title: "HEARTFELT INTERNATIONAL MINISTRIES",
       image: "ministry1.jpg",
-      text: "Over the years, Heartfelt International Ministries has achieved monumental milestones with more than 6000 seating auditorium in Harare, and its headquarters in Arlington Park. Heartfelt International Ministries is a dynamic, Spirit-led church known for its vibrant worship, life-transforming teachings, and unwavering commitment to building God’s Kingdom across the nations.",
+      text: "Over the years, Heartfelt International Ministries has achieved monumental milestones with more than 6000 seating auditorium in Harare, and its headquarters in Ashdown Park. Heartfelt International Ministries is a dynamic, Spirit-led church known for its vibrant worship, life-transforming teachings, and unwavering commitment to building God’s Kingdom across the nations.",
     },
     {
       title: "SIGNIFICANT PROGRESS",
@@ -54,7 +54,7 @@ const AboutUsPage = () => {
     {
       title: "RICHLAND CITY",
       image: "richland.jpg",
-      text: "Richland City is a visionary leadership of Apostle T. Vutabwashe and Pastor C. Vutabwashe. We have embarked on the ambitious task of building Richland City in Marondera, Zimbabwe, a sprawling Christian city spanning more than 600 hectares of farmland. This incredible endeavor serves as the exclusive venue for our annual 'Catch the Fire' conferences and is designed to feature state-of-the-art modern housing, reliable Wi-Fi, and facilities for the holistic development of believers. Richland City truly stands as a testament to God's faithfulness and our unwavering commitment to holistic community development.",
+      text: "Richland City is a visionary leadership of Apostle T. Vutabwashe and Pastor C. Vutabwashe. We have embarked on the ambitious task of building Richland City in Mhondoro, Zimbabwe, a sprawling Christian city spanning more than 600 hectares of farmland. This incredible endeavor serves as the exclusive venue for our annual 'Catch the Fire' conferences and is designed to feature state-of-the-art modern housing, reliable Wi-Fi, and facilities for the holistic development of believers. Richland City truly stands as a testament to God's faithfulness and our unwavering commitment to holistic community development.",
     },
   ];
 
@@ -76,7 +76,7 @@ const AboutUsPage = () => {
           {/* Left Image */}
           <div className="w-full sm:w-80 h-92 relative rounded-3xl overflow-hidden shadow-lg transition-transform duration-300 hover:scale-105"> {/* Added responsive width and transition */}
             <Image
-              src="/images/feature2.png"
+              src="/images/MrManyeruke.jpg"
               alt="Apostle speaking"
               fill
               className="object-cover"
@@ -86,7 +86,7 @@ const AboutUsPage = () => {
           {/* Middle Image - Wider by default and hover effect, increased height */}
           <div className="w-full sm:w-100 h-110 relative rounded-3xl overflow-hidden shadow-lg transition-transform duration-300 hover:scale-105 z-10"> {/* Added responsive width and transition */}
             <Image
-              src="/images/feature3.png"
+              src="/images/ApostleGown.jpg"
               alt="Prayer session"
               fill
               className="object-cover"
@@ -96,7 +96,7 @@ const AboutUsPage = () => {
           {/* Right Image */}
           <div className="w-full sm:w-80 h-92 relative rounded-3xl overflow-hidden shadow-lg transition-transform duration-300 hover:scale-105"> {/* Added responsive width and transition */}
             <Image
-              src="/images/feature1.png"
+              src="/images/Crusade1.jpg"
               alt="Pastor preaching"
               fill
               className="object-cover"
@@ -109,7 +109,7 @@ const AboutUsPage = () => {
         <div className="max-w-4xl mx-auto grid gap-8 md:gap-12 md:grid-cols-2 items-end animate-fade-in-up"> {/* Added responsive gap and animation */}
           {/* Vision 1 */}
           <div>
-            <p className="text-xs uppercase tracking-wider text-gray-600 mb-2">
+            <p className="text-3xl md:text-4xl font-extrabold mb-6 animate-[gradient_6s_linear_infinite] bg-[length:200%_auto] bg-gradient-to-r from-black via-[#1E90FF] to-black bg-clip-text text-transparent">
               OUR VISION
             </p>
             <h2 className="font-extrabold text-lg md:text-xl mb-4 text-[#1E90FF] leading-snug">
@@ -122,7 +122,7 @@ const AboutUsPage = () => {
 
           {/* Vision 2 - Added mt-8 for top margin on mobile, md:mt-0 to reset on larger screens */}
           <div className="mt-8 md:mt-0">
-            <p className="text-xs uppercase tracking-wider text-gray-600 mb-2">
+            <p className="text-3xl md:text-4xl font-extrabold mb-6 animate-[gradient_6s_linear_infinite] bg-[length:200%_auto] bg-gradient-to-r from-black via-[#1E90FF] to-black bg-clip-text text-transparent">
               OUR MISSION
             </p>
             <h2 className="font-extrabold text-lg md:text-xl mb-4 text-[#1E90FF] leading-snug">
@@ -140,7 +140,7 @@ const AboutUsPage = () => {
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-12">
               <h2 className="text-sm font-semibold uppercase text-blue-600 mb-2">Our Story</h2>
-              <h1 className="text-4xl md:text-5xl font-montserrat animate-[gradient_6s_linear_infinite] bg-[length:200%_auto] bg-gradient-to-r from-black via-[#1E90FF] to-black bg-clip-text text-transparent">WHO WE ARE</h1>
+              <h1 className="text-3xl md:text-4xl font-extrabold mb-6 animate-[gradient_6s_linear_infinite] bg-[length:200%_auto] bg-gradient-to-r from-black via-[#1E90FF] to-black bg-clip-text text-transparent">WHO WE ARE</h1>
             </div>
 
             <div className="space-y-20">
