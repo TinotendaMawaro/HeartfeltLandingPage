@@ -29,7 +29,7 @@ export default function Features() {
               Who We Are
             </span>
           </div>
-          <h2 className="animate-gradient-x bg-[linear-gradient(to_right,#000000,#444,#000000)] bg-clip-text bg-[length:200%_auto] text-3xl md:text-4xl font-bold text-transparent mb-4">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-black via-blue-600 to-black mb-4 animate-[gradient_6s_linear_infinite]">
             Heartfelt International Ministries
           </h2>
           <p className="text-lg text-gray-600">
@@ -56,7 +56,7 @@ export default function Features() {
               Our Mission & Vision
             </span>
           </div>
-          <h2 className="animate-gradient-x bg-[linear-gradient(to_right,#000000,#444,#000000)] bg-clip-text bg-[length:200%_auto] text-3xl md:text-4xl font-bold text-transparent mb-4">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-black via-blue-600 to-black mb-4 animate-[gradient_6s_linear_infinite]">
             Celebrate With Us
           </h2>
           <p className="text-lg text-gray-600">

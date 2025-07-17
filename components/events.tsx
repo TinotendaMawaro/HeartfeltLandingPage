@@ -60,9 +60,7 @@ const EventsHighlightsSection: React.FC = () => {
               Join Us for Our Events
             </span>
           </div>
-          <h2
-            className="relative pb-6 font-nacelle text-3xl font-extrabold text-transparent sm:text-4xl md:text-5xl bg-clip-text bg-gradient-to-r from-black via-gray-700 to-black animate-gradient-x"
-          >
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-black via-blue-600 to-black mb-4 animate-[gradient_6s_linear_infinite]">
             Events Highlights
           </h2>
           <p className="mt-4 text-gray-900 text-base sm:text-lg md:text-xl max-w-2xl mx-auto">
