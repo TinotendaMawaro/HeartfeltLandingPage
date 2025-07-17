@@ -77,7 +77,7 @@ const HeroHome = () => {
 
         <div className="space-y-4 max-w-3xl" data-aos="fade-up" data-aos-delay="100">
           <h1 className="text-lg sm:text-3xl md:text-4xl lg:text-6xl font-bold transition-all duration-1000 animate-bounce-slow">
-            BECOME A PART OF OUR COMMUNITY
+            WELCOME HOME,YOU ARE OUR FAMILY
           </h1>
           <h2 className="text-xs sm:text-base md:text-lg transition-all duration-1000 animate-bounce-slow">
             WELCOME TO HEARTFELT INTERNATIONAL MINISTRIES
