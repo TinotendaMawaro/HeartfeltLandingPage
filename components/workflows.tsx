@@ -84,6 +84,7 @@ function Workflows() {
     <section className="bg-white font-['Inter'] text-base text-black py-12 md:py-20">
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
         <div className="pb-12 md:pb-20">
+<<<<<<< HEAD
           {/* Section header */}
           <div className="mx-auto max-w-3xl pb-12 text-center md:pb-20">
           <h2 className="animate-[gradient_6s_linear_infinite] bg-[linear-gradient(to_right,#000000,rgba(0,0,0,0.5),#1E90FF,rgba(0,0,0,0.5),#000000)] bg-[length:200%_auto] bg-clip-text text-transparent relative font-['Roboto Condensed'] text-[32px] tracking-[-0.01em] leading-[64px] uppercase inline-block text-center">
@@ -92,13 +93,26 @@ function Workflows() {
             <p className="text-lg text-gray-900 font-['Roboto Condensed']">
               Discover your place in our vibrant community — whether you're finding a Heartfelt zone near you, staying updated with powerful upcoming events, or getting involved through service. There’s always a way to connect, grow, and belong.
             </p>
+=======
+          <div className="text-center mb-16 max-w-3xl mx-auto">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-black via-blue-600 to-black mb-4 animate-[gradient_6s_linear_infinite]">
+            One Church Many Locations
+          </h2>
+          <p className="text-lg text-gray-700 font-['Roboto Condensed']">
+            Discover your place in our vibrant community — whether you're finding a Heartfelt zone near you, staying updated with powerful upcoming events, or getting involved through service. There’s always a way to connect, grow, and belong.
+          </p>
+>>>>>>> master
           </div>
           {/* Spotlight items */}
           <Spotlight className="group mx-auto grid max-w-sm items-start gap-6 lg:max-w-none lg:grid-cols-3">
             {/* Card 1: Find a Zone */}
             <a
               className="group/card relative h-[403.9px] w-full max-w-[411px] mx-auto overflow-hidden rounded-[70px] bg-transparent p-px before:pointer-events-none before:absolute before:-left-40 before:-top-40 before:z-10 before:h-80 before:w-80 before:translate-x-[var(--mouse-x)] before:translate-y-[var(--mouse-y)] before:rounded-full before:bg-indigo-500/80 before:opacity-0 before:blur-3xl before:transition-opacity before:duration-500 after:pointer-events-none after:absolute after:-left-48 after:-top-48 after:z-30 after:h-64 after:w-64 after:translate-x-[var(--mouse-x)] after:translate-y-[var(--mouse-y)] after:rounded-full after:bg-indigo-500 after:opacity-0 after:blur-3xl after:transition-opacity after:duration-500 hover:after:opacity-20 group-hover:before:opacity-100"
+<<<<<<< HEAD
               href="#0"
+=======
+              href="/zones"
+>>>>>>> master
             >
               <div className="relative z-20 h-full overflow-hidden rounded-[inherit] bg-gradient-to-b from-[#1E90FF] to-[rgba(30,144,255,0.5)]"> {/* Blue gradient */}
                 {/* Image */}
@@ -130,7 +144,11 @@ function Workflows() {
             {/* Card 2: Upcoming Events */}
             <a
               className="group/card relative h-[403.9px] w-full max-w-[410px] mx-auto overflow-hidden rounded-[70px] bg-transparent p-px before:pointer-events-none before:absolute before:-left-40 before:-top-40 before:z-10 before:h-80 before:w-80 before:translate-x-[var(--mouse-x)] before:translate-y-[var(--mouse-y)] before:rounded-full before:bg-indigo-500/80 before:opacity-0 before:blur-3xl before:transition-opacity before:duration-500 after:pointer-events-none after:absolute after:-left-48 after:-top-48 after:z-30 after:h-64 after:w-64 after:translate-x-[var(--mouse-x)] after:translate-y-[var(--mouse-y)] after:rounded-full after:bg-indigo-500 after:opacity-0 after:blur-3xl after:transition-opacity after:duration-500 hover:after:opacity-20 group-hover:before:opacity-100"
+<<<<<<< HEAD
               href="#0"
+=======
+              href="/events"
+>>>>>>> master
             >
               <div className="relative z-20 h-full overflow-hidden rounded-[inherit] bg-gradient-to-b from-[#1E90FF] to-[rgba(30,144,255,0.5)]"> {/* Blue gradient */}
                 {/* Image */}
@@ -162,7 +180,11 @@ function Workflows() {
             {/* Card 3: Get Involved */}
             <a
               className="group/card relative h-[403.9px] w-full max-w-[411px] mx-auto overflow-hidden rounded-[70px] bg-transparent p-px before:pointer-events-none before:absolute before:-left-40 before:-top-40 before:z-10 before:h-80 before:w-80 before:translate-x-[var(--mouse-x)] before:translate-y-[var(--mouse-y)] before:rounded-full before:bg-indigo-500/80 before:opacity-0 before:blur-3xl before:transition-opacity before:duration-500 after:pointer-events-none after:absolute after:-left-48 after:-top-48 after:z-30 after:h-64 after:w-64 after:translate-x-[var(--mouse-x)] after:translate-y-[var(--mouse-y)] after:rounded-full after:bg-indigo-500 after:opacity-0 after:blur-3xl after:transition-opacity after:duration-500 hover:after:opacity-20 group-hover:before:opacity-100"
+<<<<<<< HEAD
               href="#0"
+=======
+              href="/departments"
+>>>>>>> master
             >
               <div className="relative z-20 h-full overflow-hidden rounded-[inherit] bg-gradient-to-b from-[#1E90FF] to-[rgba(30,144,255,0.5)]"> {/* Blue gradient */}
                 {/* Image */}

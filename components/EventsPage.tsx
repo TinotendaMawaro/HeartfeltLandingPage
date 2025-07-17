@@ -3,7 +3,7 @@
 import React, { useState } from "react";
 import Image from "next/image";
 import RegisterModal from "@/components/RegistrationModal";
-import FeaturedEventSection from "./FeaturedEventSection";
+import FeaturedEventSection from "./FeaturedEvent";
 
 const events = [
   {
@@ -14,15 +14,6 @@ const events = [
     description:
       "A significant component of the conference is dedicated to prayer, for national issues & breakthroughs.",
     image: "/images/CTF.jpg",
-  },
-  {
-    title: "Pastor Benny Hinn Conference",
-    date: "October 10-12, 2025",
-    time: "9:00 AM - 4:00 PM",
-    location: "Online via Zoom",
-    description:
-      "Don't miss the electrifying Zimbabwe Conference with Pastor Ben Hinn and Apostle Tavonga Vutabwashe!",
-    image: "/images/BennyHinn.png",
   },
   {
     title: "Men on Fire Conference",
@@ -84,6 +75,8 @@ const EventsPage: React.FC = () => {
         firstTime={firstTime}
       />
 
+      <FeaturedEventSection />
+
       <section className="relative bg-white pb-20">
         <div className="mx-auto max-w-7xl px-6 sm:px-8 lg:px-12">
           {/* Section header */}
@@ -93,7 +86,7 @@ const EventsPage: React.FC = () => {
                 Join Us for Our Events
               </span>
             </div>
-            <h2 className="text-3xl md:text-4xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-black via-gray-700 to-black animate-gradient-x">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-black via-blue-600 to-black mb-4 animate-[gradient_6s_linear_infinite]">
               Upcoming Events
             </h2>
             <p className="mt-4 max-w-2xl mx-auto text-gray-900 text-base sm:text-lg md:text-xl">

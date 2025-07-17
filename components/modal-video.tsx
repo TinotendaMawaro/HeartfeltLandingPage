@@ -84,16 +84,18 @@ export default function ModalVideo({
       <Dialog open={modalOpen} onClose={() => setModalOpen(false)}>
         <DialogBackdrop className="fixed inset-0 bg-black/70 backdrop-blur-sm" />
         <div className="fixed inset-0 z-50 flex items-center justify-center p-4">
-          <DialogPanel className="aspect-video w-full max-w-6xl overflow-hidden rounded-2xl shadow-2xl ring-1 ring-indigo-400/20 bg-black">
-            <iframe
-              ref={videoRef}
-              className="h-full w-full"
-              src={`https://www.youtube.com/embed/Dtwk2hKbHPA`}
-              title="Heartfelt Live Service"
-              frameBorder="0"
-              allow="autoplay; encrypted-media"
-              allowFullScreen
-            />
+          <DialogPanel className="w-full max-w-6xl rounded-2xl overflow-hidden shadow-2xl ring-1 ring-indigo-400/20 bg-black">
+            <div className="relative w-full aspect-video">
+              <iframe
+                ref={videoRef}
+                className="absolute top-0 left-0 h-full w-full rounded-2xl"
+                src={`https://www.youtube.com/embed/${youtubeId}?rel=0`}
+                title="Heartfelt Live Service"
+                frameBorder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+              />
+            </div>
           </DialogPanel>
         </div>
       </Dialog>

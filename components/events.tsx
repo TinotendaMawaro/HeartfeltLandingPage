@@ -60,9 +60,7 @@ const EventsHighlightsSection: React.FC = () => {
               Join Us for Our Events
             </span>
           </div>
-          <h2
-            className="animate-[gradient_6s_linear_infinite] bg-[linear-gradient(to_right,#000000,rgba(0,0,0,0.5),#1E90FF,rgba(0,0,0,0.5),#000000)] bg-[length:200%_auto] bg-clip-text text-transparent font-['Montserrat'] text-3xl md:text-4xl lg:text-5xl font-extrabold uppercase leading-[64px] tracking-[-0.01em] drop-shadow-md"
-          >
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-black via-blue-600 to-black mb-4 animate-[gradient_6s_linear_infinite]">
             Events Highlights
           </h2>
           <p className="mt-4 text-gray-900 text-base sm:text-lg md:text-xl max-w-2xl mx-auto font-['Roboto Condensed'] opacity-80">
