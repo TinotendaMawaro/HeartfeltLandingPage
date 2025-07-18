@@ -15,7 +15,7 @@ export default function AboutPage() {
     <>
 
       {/* Hero Section */}
-      <section className="relative w-full min-h-[500px] flex items-center justify-center text-center text-white">
+<section className="relative w-full min-h-[600px] flex items-center justify-center text-center text-white animate-float-ripple ">
         {/* Background Image */}
         <div className="absolute inset-0 -z-10">
           <Image
@@ -44,3 +44,19 @@ export default function AboutPage() {
     </>
   );
 }
+module.exports = {
+  theme: {
+    extend: {
+      animation: {
+        'custom-bounce': 'customBounce 3s ease-in-out',
+      },
+      keyframes: {
+        customBounce: {
+          '0%, 100%': { transform: 'translateY(0)' },
+          '50%': { transform: 'translateY(-8px)' }, // smaller bounce height
+        },
+      },
+    },
+  },
+  plugins: [],
+};

@@ -10,7 +10,7 @@ const InstitutePage = () => {
   return (
     <>
       {/* Hero Header with Background Image */}
-      <section className="relative w-full min-h-[500px] flex items-center justify-center text-center text-white">
+   <section className="relative w-full min-h-[600px] flex items-center justify-center text-center text-white animate-float-ripple ">
         {/* Background Image */}
         <div className="absolute inset-0 -z-10">
           <Image
